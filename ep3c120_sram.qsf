@@ -1,0 +1,940 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+# Date created = 21:58:06  July 17, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		3c120_sram_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C120F780C7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:05:25  NOVEMBER 07, 2008"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name CYCLONEIII_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name STRATIX_JTAG_USER_CODE DEADBEEF
+set_location_assignment PIN_AH19 -to top_ddr2bot_dm[0]
+set_location_assignment PIN_AC15 -to top_ddr2bot_dm[1]
+set_location_assignment PIN_AG22 -to top_ddr2bot_dq[0]
+set_location_assignment PIN_AH21 -to top_ddr2bot_dq[1]
+set_location_assignment PIN_AH22 -to top_ddr2bot_dq[2]
+set_location_assignment PIN_AG21 -to top_ddr2bot_dq[3]
+set_location_assignment PIN_AD17 -to top_ddr2bot_dq[4]
+set_location_assignment PIN_AH23 -to top_ddr2bot_dq[5]
+set_location_assignment PIN_AE19 -to top_ddr2bot_dq[6]
+set_location_assignment PIN_AF24 -to top_ddr2bot_dq[7]
+set_location_assignment PIN_AG18 -to top_ddr2bot_dq[8]
+set_location_assignment PIN_AG17 -to top_ddr2bot_dq[9]
+set_location_assignment PIN_AH18 -to top_ddr2bot_dq[10]
+set_location_assignment PIN_AH17 -to top_ddr2bot_dq[11]
+set_location_assignment PIN_AF15 -to top_ddr2bot_dq[12]
+set_location_assignment PIN_AE17 -to top_ddr2bot_dq[13]
+set_location_assignment PIN_AF16 -to top_ddr2bot_dq[14]
+set_location_assignment PIN_AB16 -to top_ddr2bot_dq[15]
+set_location_assignment PIN_AE18 -to top_ddr2bot_dqs[0]
+set_location_assignment PIN_AF17 -to top_ddr2bot_dqs[1]
+set_location_assignment PIN_AF8 -to top_ddr2bot_dm[2]
+set_location_assignment PIN_AB9 -to top_ddr2bot_dm[3]
+set_location_assignment PIN_AE11 -to top_ddr2bot_dq[16]
+set_location_assignment PIN_AG11 -to top_ddr2bot_dq[17]
+set_location_assignment PIN_AG10 -to top_ddr2bot_dq[18]
+set_location_assignment PIN_AH11 -to top_ddr2bot_dq[19]
+set_location_assignment PIN_AE9 -to top_ddr2bot_dq[20]
+set_location_assignment PIN_AE12 -to top_ddr2bot_dq[21]
+set_location_assignment PIN_AF10 -to top_ddr2bot_dq[22]
+set_location_assignment PIN_AE13 -to top_ddr2bot_dq[23]
+set_location_assignment PIN_AC8 -to top_ddr2bot_dq[24]
+set_location_assignment PIN_AH7 -to top_ddr2bot_dq[25]
+set_location_assignment PIN_AG8 -to top_ddr2bot_dq[26]
+set_location_assignment PIN_AH8 -to top_ddr2bot_dq[27]
+set_location_assignment PIN_AG7 -to top_ddr2bot_dq[28]
+set_location_assignment PIN_AA10 -to top_ddr2bot_dq[29]
+set_location_assignment PIN_AF7 -to top_ddr2bot_dq[30]
+set_location_assignment PIN_AD10 -to top_ddr2bot_dq[31]
+set_location_assignment PIN_AF11 -to top_ddr2bot_dqs[2]
+set_location_assignment PIN_AE10 -to top_ddr2bot_dqs[3]
+set_location_assignment PIN_B10 -to top_ddr2top_dm[0]
+set_location_assignment PIN_A8 -to top_ddr2top_dm[1]
+set_location_assignment PIN_A12 -to top_ddr2top_dq[0]
+set_location_assignment PIN_C14 -to top_ddr2top_dq[1]
+set_location_assignment PIN_A11 -to top_ddr2top_dq[2]
+set_location_assignment PIN_C13 -to top_ddr2top_dq[3]
+set_location_assignment PIN_D15 -to top_ddr2top_dq[4]
+set_location_assignment PIN_C12 -to top_ddr2top_dq[5]
+set_location_assignment PIN_E14 -to top_ddr2top_dq[6]
+set_location_assignment PIN_D13 -to top_ddr2top_dq[7]
+set_location_assignment PIN_B7 -to top_ddr2top_dq[8]
+set_location_assignment PIN_C11 -to top_ddr2top_dq[9]
+set_location_assignment PIN_A7 -to top_ddr2top_dq[10]
+set_location_assignment PIN_C10 -to top_ddr2top_dq[11]
+set_location_assignment PIN_E11 -to top_ddr2top_dq[12]
+set_location_assignment PIN_B6 -to top_ddr2top_dq[13]
+set_location_assignment PIN_H13 -to top_ddr2top_dq[14]
+set_location_assignment PIN_D10 -to top_ddr2top_dq[15]
+set_location_assignment PIN_D12 -to top_ddr2top_dqs[0]
+set_location_assignment PIN_E12 -to top_ddr2top_dqs[1]
+set_location_assignment PIN_E15 -to top_ddr2top_dm[2]
+set_location_assignment PIN_C20 -to top_ddr2top_dm[3]
+set_location_assignment PIN_B23 -to top_ddr2top_dm[4]
+set_location_assignment PIN_C17 -to top_ddr2top_dq[16]
+set_location_assignment PIN_B19 -to top_ddr2top_dq[17]
+set_location_assignment PIN_B18 -to top_ddr2top_dq[18]
+set_location_assignment PIN_C19 -to top_ddr2top_dq[19]
+set_location_assignment PIN_D20 -to top_ddr2top_dq[20]
+set_location_assignment PIN_C16 -to top_ddr2top_dq[21]
+set_location_assignment PIN_A19 -to top_ddr2top_dq[22]
+set_location_assignment PIN_E17 -to top_ddr2top_dq[23]
+set_location_assignment PIN_C21 -to top_ddr2top_dq[24]
+set_location_assignment PIN_C22 -to top_ddr2top_dq[25]
+set_location_assignment PIN_A21 -to top_ddr2top_dq[26]
+set_location_assignment PIN_A22 -to top_ddr2top_dq[27]
+set_location_assignment PIN_C24 -to top_ddr2top_dq[28]
+set_location_assignment PIN_B21 -to top_ddr2top_dq[29]
+set_location_assignment PIN_D21 -to top_ddr2top_dq[30]
+set_location_assignment PIN_E18 -to top_ddr2top_dq[31]
+set_location_assignment PIN_E22 -to top_ddr2top_dq[32]
+set_location_assignment PIN_C25 -to top_ddr2top_dq[33]
+set_location_assignment PIN_A23 -to top_ddr2top_dq[34]
+set_location_assignment PIN_B25 -to top_ddr2top_dq[35]
+set_location_assignment PIN_A26 -to top_ddr2top_dq[36]
+set_location_assignment PIN_F21 -to top_ddr2top_dq[37]
+set_location_assignment PIN_B26 -to top_ddr2top_dq[38]
+set_location_assignment PIN_D22 -to top_ddr2top_dq[39]
+set_location_assignment PIN_B17 -to top_ddr2top_dqs[2]
+set_location_assignment PIN_D17 -to top_ddr2top_dqs[3]
+set_location_assignment PIN_A25 -to top_ddr2top_dqs[4]
+set_location_assignment PIN_AE14 -to top_ddr2_ck_p[0]
+set_location_assignment PIN_AF14 -to top_ddr2_ck_n[0]
+set_location_assignment PIN_H12 -to top_ddr2_ck_p[1]
+set_location_assignment PIN_G11 -to top_ddr2_ck_n[1]
+set_location_assignment PIN_J19 -to top_ddr2_ck_p[2]
+set_location_assignment PIN_H19 -to top_ddr2_ck_n[2]
+set_location_assignment PIN_N8 -to top_enet_mdc
+set_location_assignment PIN_L5 -to top_enet_mdio
+set_location_assignment PIN_B14 -to top_enet_rx_clk
+set_location_assignment PIN_AA7 -to top_enet_tx_en
+set_location_assignment PIN_T8 -to top_enet_gtx_clk
+set_location_assignment PIN_AH14 -to top_clkin_sma
+set_location_assignment PIN_B15 -to top_usb_ifclk
+set_location_assignment PIN_AH15 -to top_clk
+set_location_assignment PIN_AH15 -to top_clkin_50
+set_location_assignment PIN_A14 -to top_clkin_125
+set_location_assignment PIN_P3 -to ~ALTERA_DCLK~
+set_location_assignment PIN_N7 -to ~ALTERA_DATA0~
+set_location_assignment PIN_AA17 -to termination_blk0~_rup_pad
+set_location_assignment PIN_AB17 -to termination_blk0~_rdn_pad
+set_location_assignment PIN_F19 -to termination_blk1~_rup_pad
+set_location_assignment PIN_E19 -to termination_blk1~_rdn_pad
+set_location_assignment PIN_W8 -to top_enet_rxd[0]
+set_location_assignment PIN_AA6 -to top_enet_rxd[1]
+set_location_assignment PIN_W7 -to top_enet_rxd[2]
+set_location_assignment PIN_Y6 -to top_enet_rxd[3]
+set_location_assignment PIN_W4 -to top_enet_txd[0]
+set_location_assignment PIN_AA5 -to top_enet_txd[1]
+set_location_assignment PIN_Y5 -to top_enet_txd[2]
+set_location_assignment PIN_W3 -to top_enet_txd[3]
+set_location_assignment PIN_Y17 -to top_flash_oen
+set_location_assignment PIN_AA21 -to top_flash_wen
+set_location_assignment PIN_D23 -to top_cs_n_to_the_max2
+set_location_assignment PIN_E25 -to top_oe_n_to_the_max2
+set_location_assignment PIN_C15 -to top_we_n_to_the_max2
+set_location_assignment PIN_AF20 -to top_sram_ben[0]
+set_location_assignment PIN_AH26 -to top_sram_ben[1]
+set_location_assignment PIN_AE22 -to top_sram_ben[2]
+set_location_assignment PIN_AB21 -to top_sram_ben[3]
+set_location_assignment PIN_AD22 -to top_sram_clk
+set_location_assignment PIN_AB19 -to top_sram_csn
+set_location_assignment PIN_AD25 -to top_sram_oen
+set_location_assignment PIN_U7 -to termination_blk2~_rup_pad
+set_location_assignment PIN_U8 -to termination_blk2~_rdn_pad
+set_location_assignment PIN_AE25 -to top_sram_wen
+set_location_assignment PIN_AG15 -to top_sram_wait[0]
+set_location_assignment PIN_AH25 -to top_sram_wait[1]
+set_location_assignment PIN_H7 -to top_lcd_rstn
+set_location_assignment PIN_AC4 -to top_lcd_wen
+set_location_assignment PIN_V7 -to top_lcd_e_rdn
+set_location_assignment PIN_C27 -to top_usb_cmd_data
+set_location_assignment PIN_G23 -to top_usb_ren
+set_location_assignment PIN_E26 -to top_usb_wen
+set_location_assignment PIN_F25 -to top_usb_empty
+set_location_assignment PIN_F24 -to top_usb_full
+set_location_assignment PIN_AA4 -to top_lcd_data[0]
+set_location_assignment PIN_AD1 -to top_lcd_data[1]
+set_location_assignment PIN_V8 -to top_lcd_data[2]
+set_location_assignment PIN_AB5 -to top_lcd_data[3]
+set_location_assignment PIN_AE2 -to top_lcd_data[4]
+set_location_assignment PIN_V5 -to top_lcd_data[5]
+set_location_assignment PIN_V6 -to top_lcd_data[6]
+set_location_assignment PIN_AB3 -to top_lcd_data[7]
+set_location_assignment PIN_L21 -to top_usb_fd[0]
+set_location_assignment PIN_K22 -to top_usb_fd[1]
+set_location_assignment PIN_L22 -to top_usb_fd[2]
+set_location_assignment PIN_K21 -to top_usb_fd[3]
+set_location_assignment PIN_J24 -to top_usb_fd[4]
+set_location_assignment PIN_G26 -to top_usb_fd[5]
+set_location_assignment PIN_J23 -to top_usb_fd[6]
+set_location_assignment PIN_D26 -to top_usb_fd[7]
+set_location_assignment PIN_AA22 -to termination_blk3~_rup_pad
+set_location_assignment PIN_AB23 -to termination_blk3~_rdn_pad
+set_location_assignment PIN_AC24 -to top_lcd_en
+set_location_assignment PIN_AB24 -to top_lcd_csn
+set_location_assignment PIN_D27 -to top_lcd_d_cn
+set_location_assignment PIN_H22 -to top_speaker_out
+set_location_assignment EDGE_TOP -to top_ddr2top_a
+set_location_assignment EDGE_TOP -to top_ddr2top_ba
+set_location_assignment PIN_A10 -to top_ddr2top_wen
+set_location_assignment PIN_F8 -to top_ddr2top_rasn
+set_location_assignment PIN_F14 -to top_ddr2top_casn
+set_location_assignment PIN_E21 -to top_ddr2top_cke
+set_location_assignment PIN_C7 -to top_ddr2top_csn
+set_location_assignment PIN_A6 -to top_ddr2top_odt
+set_location_assignment EDGE_BOTTOM -to top_ddr2bot_a
+set_location_assignment EDGE_BOTTOM -to top_ddr2bot_ba
+set_location_assignment PIN_AE5 -to top_ddr2bot_wen
+set_location_assignment PIN_AE21 -to top_ddr2bot_rasn
+set_location_assignment PIN_AD21 -to top_ddr2bot_casn
+set_location_assignment PIN_AG4 -to top_ddr2bot_cke
+set_location_assignment PIN_AC21 -to top_ddr2bot_csn
+set_location_assignment PIN_AE24 -to top_ddr2bot_odt
+set_location_assignment PIN_AE23 -to top_clkout_sma
+set_location_assignment IOBANK_4 -to top_user_led
+set_location_assignment IOBANK_4 -to top_led
+set_location_assignment IOBANK_4 -to top_out_port_from_the_led_pio
+set_location_assignment PIN_AD7 -to top_button[0]
+set_location_assignment PIN_AC12 -to top_button[1]
+set_location_assignment PIN_AH3 -to top_button[2]
+set_location_assignment PIN_AA12 -to top_button[3]
+set_location_assignment PIN_AD7 -to top_user_pb[0]
+set_location_assignment PIN_AC12 -to top_user_pb[1]
+set_location_assignment PIN_AH3 -to top_user_pb[2]
+set_location_assignment PIN_AA12 -to top_user_pb[3]
+set_location_assignment PIN_J13 -to top_ddr2top_a[0]
+set_location_assignment PIN_G18 -to top_ddr2top_a[1]
+set_location_assignment PIN_E8 -to top_ddr2top_a[2]
+set_location_assignment PIN_D24 -to top_ddr2top_a[3]
+set_location_assignment PIN_D7 -to top_ddr2top_a[4]
+set_location_assignment PIN_J15 -to top_ddr2top_a[5]
+set_location_assignment PIN_H15 -to top_ddr2top_a[6]
+set_location_assignment PIN_J16 -to top_ddr2top_a[7]
+set_location_assignment PIN_H8 -to top_ddr2top_a[8]
+set_location_assignment PIN_D16 -to top_ddr2top_a[9]
+set_location_assignment PIN_A17 -to top_ddr2top_a[10]
+set_location_assignment PIN_D8 -to top_ddr2top_a[11]
+set_location_assignment PIN_D25 -to top_ddr2top_a[12]
+set_location_assignment PIN_F15 -to top_ddr2top_a[13]
+set_location_assignment PIN_B12 -to top_ddr2top_a[14]
+set_location_assignment PIN_H16 -to top_ddr2top_a[15]
+set_location_assignment PIN_C23 -to top_ddr2top_ba[0]
+set_location_assignment PIN_D19 -to top_ddr2top_ba[1]
+set_location_assignment PIN_C26 -to top_ddr2top_ba[2]
+set_location_assignment PIN_AB22 -to top_ddr2bot_a[0]
+set_location_assignment PIN_AG6 -to top_ddr2bot_a[1]
+set_location_assignment PIN_Y13 -to top_ddr2bot_a[2]
+set_location_assignment PIN_AE7 -to top_ddr2bot_a[3]
+set_location_assignment PIN_AB12 -to top_ddr2bot_a[4]
+set_location_assignment PIN_AC7 -to top_ddr2bot_a[5]
+set_location_assignment PIN_AD12 -to top_ddr2bot_a[6]
+set_location_assignment PIN_AB8 -to top_ddr2bot_a[7]
+set_location_assignment PIN_AH12 -to top_ddr2bot_a[8]
+set_location_assignment PIN_AB10 -to top_ddr2bot_a[9]
+set_location_assignment PIN_AE4 -to top_ddr2bot_a[10]
+set_location_assignment PIN_AF21 -to top_ddr2bot_a[11]
+set_location_assignment PIN_Y12 -to top_ddr2bot_a[12]
+set_location_assignment PIN_Y14 -to top_ddr2bot_a[13]
+set_location_assignment PIN_AF12 -to top_ddr2bot_a[14]
+set_location_assignment PIN_AA16 -to top_ddr2bot_a[15]
+set_location_assignment PIN_AF3 -to top_ddr2bot_ba[0]
+set_location_assignment PIN_AF5 -to top_ddr2bot_ba[1]
+set_location_assignment PIN_AH4 -to top_ddr2bot_ba[2]
+set_location_assignment PIN_AD15 -to top_user_led[0]
+set_location_assignment PIN_AE20 -to top_user_led[1]
+set_location_assignment PIN_AF18 -to top_user_led[2]
+set_location_assignment PIN_AD19 -to top_user_led[3]
+set_location_assignment PIN_AE15 -to top_user_led[4]
+set_location_assignment PIN_AC17 -to top_user_led[5]
+set_location_assignment PIN_AG19 -to top_user_led[6]
+set_location_assignment PIN_AF19 -to top_user_led[7]
+set_location_assignment PIN_AD15 -to top_led[0]
+set_location_assignment PIN_AE20 -to top_led[1]
+set_location_assignment PIN_AF18 -to top_led[2]
+set_location_assignment PIN_AD19 -to top_led[3]
+set_location_assignment PIN_AE15 -to top_led[4]
+set_location_assignment PIN_AC17 -to top_led[5]
+set_location_assignment PIN_AG19 -to top_led[6]
+set_location_assignment PIN_AF19 -to top_led[7]
+set_location_assignment PIN_AD15 -to top_out_port_from_the_led_pio[0]
+set_location_assignment PIN_AE20 -to top_out_port_from_the_led_pio[1]
+set_location_assignment PIN_AF18 -to top_out_port_from_the_led_pio[2]
+set_location_assignment PIN_AD19 -to top_out_port_from_the_led_pio[3]
+set_location_assignment PIN_AE15 -to top_out_port_from_the_led_pio[4]
+set_location_assignment PIN_AC17 -to top_out_port_from_the_led_pio[5]
+set_location_assignment PIN_AG19 -to top_out_port_from_the_led_pio[6]
+set_location_assignment PIN_AF19 -to top_out_port_from_the_led_pio[7]
+set_location_assignment PIN_AD5 -to top_seven_seg_a
+set_location_assignment PIN_A3 -to top_seven_seg_b
+set_location_assignment PIN_C4 -to top_seven_seg_c
+set_location_assignment PIN_D4 -to top_seven_seg_d
+set_location_assignment PIN_E5 -to top_seven_seg_e
+set_location_assignment PIN_D5 -to top_seven_seg_f
+set_location_assignment PIN_AE6 -to top_seven_seg_g
+set_location_assignment PIN_AD4 -to top_seven_seg_dp
+set_location_assignment PIN_G19 -to top_seven_seg_minus
+set_location_assignment PIN_B3 -to top_seven_seg_sel[1]
+set_location_assignment PIN_C5 -to top_seven_seg_sel[2]
+set_location_assignment PIN_E4 -to top_seven_seg_sel[3]
+set_location_assignment PIN_C3 -to top_seven_seg_sel[4]
+set_location_assignment PIN_AC14 -to top_user_dipsw[0]
+set_location_assignment PIN_AD18 -to top_user_dipsw[1]
+set_location_assignment PIN_AG23 -to top_user_dipsw[2]
+set_location_assignment PIN_AC19 -to top_user_dipsw[3]
+set_location_assignment PIN_AD14 -to top_user_dipsw[4]
+set_location_assignment PIN_G20 -to top_user_dipsw[5]
+set_location_assignment PIN_AB15 -to top_user_dipsw[6]
+set_location_assignment PIN_AF25 -to top_user_dipsw[7]
+set_location_assignment EDGE_BOTTOM -to top_fsa
+set_location_assignment EDGE_TOP -to top_fsd
+set_location_assignment PIN_AG14 -to top_hsma_clk_in0
+set_location_assignment PIN_Y2 -to top_hsma_clk_in_p[1]
+set_location_assignment PIN_J2 -to top_hsma_clk_in_p[2]
+set_location_assignment PIN_Y7 -to top_hsma_clk_out0
+set_location_assignment PIN_G6 -to top_hsma_clk_out_p[1]
+set_location_assignment PIN_D2 -to top_hsma_clk_out_p[2]
+set_location_assignment PIN_AB6 -to top_hsma_d[0]
+set_location_assignment PIN_AF2 -to top_hsma_d[1]
+set_location_assignment PIN_AE3 -to top_hsma_d[2]
+set_location_assignment PIN_AC5 -to top_hsma_d[3]
+set_location_assignment PIN_AB4 -to top_enet_rx_dv
+set_location_assignment PIN_AD2 -to top_enet_resetn
+set_location_assignment PIN_Y16 -to top_flash_cen
+set_location_assignment PIN_AG25 -to top_flash_rdybsyn
+set_location_assignment PIN_AB20 -to top_flash_resetn
+set_location_assignment PIN_B4 -to top_sram_psn
+set_location_assignment PIN_T21 -to top_reset_n
+set_location_assignment PIN_T21 -to top_user_resetn
+set_location_assignment PIN_AE1 -to top_hsma_rx_led
+set_location_assignment PIN_AC3 -to top_hsma_scl
+set_location_assignment PIN_AC1 -to top_hsma_sda
+set_location_assignment PIN_AA3 -to top_hsma_tx_led
+set_location_assignment PIN_A15 -to top_hsmb_clk_in0
+set_location_assignment PIN_J22 -to top_hsmb_clk_out0
+set_location_assignment EDGE_RIGHT -to top_hsmb_d
+set_location_assignment PIN_F26 -to top_hsmb_rx_led
+set_location_assignment PIN_H25 -to top_hsmb_scl
+set_location_assignment PIN_H26 -to top_hsmb_sda
+set_location_assignment PIN_D28 -to top_hsmb_tx_led
+set_location_assignment PIN_AC11 -to top_fsa[0]
+set_location_assignment PIN_AH10 -to top_fsa[1]
+set_location_assignment PIN_AA13 -to top_fsa[2]
+set_location_assignment PIN_AC10 -to top_fsa[3]
+set_location_assignment PIN_Y15 -to top_fsa[4]
+set_location_assignment PIN_AF22 -to top_fsa[5]
+set_location_assignment PIN_AF26 -to top_fsa[6]
+set_location_assignment PIN_AF4 -to top_fsa[7]
+set_location_assignment PIN_AD8 -to top_fsa[8]
+set_location_assignment PIN_AG26 -to top_fsa[9]
+set_location_assignment PIN_AH6 -to top_fsa[10]
+set_location_assignment PIN_AD24 -to top_fsa[11]
+set_location_assignment PIN_AF9 -to top_fsa[12]
+set_location_assignment PIN_AA8 -to top_fsa[13]
+set_location_assignment PIN_AC22 -to top_fsa[14]
+set_location_assignment PIN_AE8 -to top_fsa[15]
+set_location_assignment PIN_AF13 -to top_fsa[16]
+set_location_assignment PIN_AB14 -to top_fsa[17]
+set_location_assignment PIN_AF23 -to top_fsa[18]
+set_location_assignment PIN_AG12 -to top_fsa[19]
+set_location_assignment PIN_AB18 -to top_fsa[20]
+set_location_assignment PIN_Y19 -to top_fsa[21]
+set_location_assignment PIN_AG3 -to top_fsa[22]
+set_location_assignment PIN_AE16 -to top_fsa[23]
+set_location_assignment PIN_AB7 -to top_fsa[24]
+set_location_assignment PIN_J14 -to top_fsd[0]
+set_location_assignment PIN_D6 -to top_fsd[1]
+set_location_assignment PIN_J17 -to top_fsd[2]
+set_location_assignment PIN_G7 -to top_fsd[3]
+set_location_assignment PIN_F18 -to top_fsd[4]
+set_location_assignment PIN_C6 -to top_fsd[5]
+set_location_assignment PIN_H17 -to top_fsd[6]
+set_location_assignment PIN_C18 -to top_fsd[7]
+set_location_assignment PIN_D18 -to top_fsd[8]
+set_location_assignment PIN_G16 -to top_fsd[9]
+set_location_assignment PIN_G22 -to top_fsd[10]
+set_location_assignment PIN_F12 -to top_fsd[11]
+set_location_assignment PIN_D11 -to top_fsd[12]
+set_location_assignment PIN_E24 -to top_fsd[13]
+set_location_assignment PIN_H21 -to top_fsd[14]
+set_location_assignment PIN_G9 -to top_fsd[15]
+set_location_assignment PIN_A4 -to top_fsd[16]
+set_location_assignment PIN_G13 -to top_fsd[17]
+set_location_assignment PIN_H14 -to top_fsd[18]
+set_location_assignment PIN_B8 -to top_fsd[19]
+set_location_assignment PIN_C8 -to top_fsd[20]
+set_location_assignment PIN_F7 -to top_fsd[21]
+set_location_assignment PIN_B11 -to top_fsd[22]
+set_location_assignment PIN_B22 -to top_fsd[23]
+set_location_assignment PIN_A18 -to top_fsd[24]
+set_location_assignment PIN_G8 -to top_fsd[25]
+set_location_assignment PIN_J12 -to top_fsd[26]
+set_location_assignment PIN_D9 -to top_fsd[27]
+set_location_assignment PIN_C9 -to top_fsd[28]
+set_location_assignment PIN_E7 -to top_fsd[29]
+set_location_assignment PIN_H10 -to top_fsd[30]
+set_location_assignment PIN_J10 -to top_fsd[31]
+set_location_assignment PIN_AA19 -to top_sram_advn
+set_location_assignment PIN_Y1 -to top_hsma_clk_in_n[1]
+set_location_assignment PIN_J1 -to top_hsma_clk_in_n[2]
+set_location_assignment PIN_G5 -to top_hsma_clk_out_n[1]
+set_location_assignment PIN_D1 -to top_hsma_clk_out_n[2]
+set_location_assignment PIN_AB1 -to top_hsma_rx_d_n[0]
+set_location_assignment PIN_Y3 -to top_hsma_rx_d_n[1]
+set_location_assignment PIN_U4 -to top_hsma_rx_d_n[2]
+set_location_assignment PIN_W1 -to top_hsma_rx_d_n[3]
+set_location_assignment PIN_V1 -to top_hsma_rx_d_n[4]
+set_location_assignment PIN_U1 -to top_hsma_rx_d_n[5]
+set_location_assignment PIN_U5 -to top_hsma_rx_d_n[6]
+set_location_assignment PIN_R1 -to top_hsma_rx_d_n[7]
+set_location_assignment PIN_N3 -to top_hsma_rx_d_n[8]
+set_location_assignment PIN_L3 -to top_hsma_rx_d_n[9]
+set_location_assignment PIN_L1 -to top_hsma_rx_d_n[10]
+set_location_assignment PIN_K1 -to top_hsma_rx_d_n[11]
+set_location_assignment PIN_J5 -to top_hsma_rx_d_n[12]
+set_location_assignment PIN_H3 -to top_hsma_rx_d_n[13]
+set_location_assignment PIN_G3 -to top_hsma_rx_d_n[14]
+set_location_assignment PIN_F1 -to top_hsma_rx_d_n[15]
+set_location_assignment PIN_F3 -to top_hsma_rx_d_n[16]
+set_location_assignment PIN_AB2 -to top_hsma_rx_d_p[0]
+set_location_assignment PIN_Y4 -to top_hsma_rx_d_p[1]
+set_location_assignment PIN_U3 -to top_hsma_rx_d_p[2]
+set_location_assignment PIN_W2 -to top_hsma_rx_d_p[3]
+set_location_assignment PIN_V2 -to top_hsma_rx_d_p[4]
+set_location_assignment PIN_U2 -to top_hsma_rx_d_p[5]
+set_location_assignment PIN_U6 -to top_hsma_rx_d_p[6]
+set_location_assignment PIN_R2 -to top_hsma_rx_d_p[7]
+set_location_assignment PIN_N4 -to top_hsma_rx_d_p[8]
+set_location_assignment PIN_L4 -to top_hsma_rx_d_p[9]
+set_location_assignment PIN_L2 -to top_hsma_rx_d_p[10]
+set_location_assignment PIN_K2 -to top_hsma_rx_d_p[11]
+set_location_assignment PIN_J6 -to top_hsma_rx_d_p[12]
+set_location_assignment PIN_H4 -to top_hsma_rx_d_p[13]
+set_location_assignment PIN_G4 -to top_hsma_rx_d_p[14]
+set_location_assignment PIN_F2 -to top_hsma_rx_d_p[15]
+set_location_assignment PIN_E3 -to top_hsma_rx_d_p[16]
+set_location_assignment PIN_R6 -to top_hsma_tx_d_n[0]
+set_location_assignment PIN_V3 -to top_hsma_tx_d_n[1]
+set_location_assignment PIN_T3 -to top_hsma_tx_d_n[2]
+set_location_assignment PIN_R4 -to top_hsma_tx_d_n[3]
+set_location_assignment PIN_M7 -to top_hsma_tx_d_n[4]
+set_location_assignment PIN_P1 -to top_hsma_tx_d_n[5]
+set_location_assignment PIN_M3 -to top_hsma_tx_d_n[6]
+set_location_assignment PIN_M1 -to top_hsma_tx_d_n[7]
+set_location_assignment PIN_L6 -to top_hsma_tx_d_n[8]
+set_location_assignment PIN_L8 -to top_hsma_tx_d_n[9]
+set_location_assignment PIN_K3 -to top_hsma_tx_d_n[10]
+set_location_assignment PIN_J3 -to top_hsma_tx_d_n[11]
+set_location_assignment PIN_K7 -to top_hsma_tx_d_n[12]
+set_location_assignment PIN_G1 -to top_hsma_tx_d_n[13]
+set_location_assignment PIN_F4 -to top_hsma_tx_d_n[14]
+set_location_assignment PIN_E1 -to top_hsma_tx_d_n[15]
+set_location_assignment PIN_C2 -to top_hsma_tx_d_n[16]
+set_location_assignment PIN_R7 -to top_hsma_tx_d_p[0]
+set_location_assignment PIN_V4 -to top_hsma_tx_d_p[1]
+set_location_assignment PIN_T4 -to top_hsma_tx_d_p[2]
+set_location_assignment PIN_R3 -to top_hsma_tx_d_p[3]
+set_location_assignment PIN_M8 -to top_hsma_tx_d_p[4]
+set_location_assignment PIN_P2 -to top_hsma_tx_d_p[5]
+set_location_assignment PIN_M4 -to top_hsma_tx_d_p[6]
+set_location_assignment PIN_M2 -to top_hsma_tx_d_p[7]
+set_location_assignment PIN_L7 -to top_hsma_tx_d_p[8]
+set_location_assignment PIN_K8 -to top_hsma_tx_d_p[9]
+set_location_assignment PIN_K4 -to top_hsma_tx_d_p[10]
+set_location_assignment PIN_J4 -to top_hsma_tx_d_p[11]
+set_location_assignment PIN_J7 -to top_hsma_tx_d_p[12]
+set_location_assignment PIN_G2 -to top_hsma_tx_d_p[13]
+set_location_assignment PIN_F5 -to top_hsma_tx_d_p[14]
+set_location_assignment PIN_E2 -to top_hsma_tx_d_p[15]
+set_location_assignment PIN_D3 -to top_hsma_tx_d_p[16]
+set_location_assignment PIN_J28 -to top_hsmb_clk_in_n[1]
+set_location_assignment PIN_Y28 -to top_hsmb_clk_in_n[2]
+set_location_assignment PIN_J27 -to top_hsmb_clk_in_p[1]
+set_location_assignment PIN_Y27 -to top_hsmb_clk_in_p[2]
+set_location_assignment PIN_AD26 -to top_hsmb_clk_out_n[1]
+set_location_assignment PIN_AD28 -to top_hsmb_clk_out_n[2]
+set_location_assignment PIN_AC26 -to top_hsmb_clk_out_p[1]
+set_location_assignment PIN_AD27 -to top_hsmb_clk_out_p[2]
+set_location_assignment PIN_G24 -to top_hsmb_d[0]
+set_location_assignment PIN_H23 -to top_hsmb_d[1]
+set_location_assignment PIN_G25 -to top_hsmb_d[2]
+set_location_assignment PIN_H24 -to top_hsmb_d[3]
+set_location_assignment PIN_F28 -to top_hsmb_rx_d_n[0]
+set_location_assignment PIN_G28 -to top_hsmb_rx_d_n[1]
+set_location_assignment PIN_K26 -to top_hsmb_rx_d_n[2]
+set_location_assignment PIN_K28 -to top_hsmb_rx_d_n[3]
+set_location_assignment PIN_L28 -to top_hsmb_rx_d_n[4]
+set_location_assignment PIN_M28 -to top_hsmb_rx_d_n[5]
+set_location_assignment PIN_P26 -to top_hsmb_rx_d_n[6]
+set_location_assignment PIN_P28 -to top_hsmb_rx_d_n[7]
+set_location_assignment PIN_R21 -to top_hsmb_rx_d_n[8]
+set_location_assignment PIN_R23 -to top_hsmb_rx_d_n[9]
+set_location_assignment PIN_T26 -to top_hsmb_rx_d_n[10]
+set_location_assignment PIN_U28 -to top_hsmb_rx_d_n[11]
+set_location_assignment PIN_V22 -to top_hsmb_rx_d_n[12]
+set_location_assignment PIN_W27 -to top_hsmb_rx_d_n[13]
+set_location_assignment PIN_V24 -to top_hsmb_rx_d_n[14]
+set_location_assignment PIN_AB28 -to top_hsmb_rx_d_n[15]
+set_location_assignment PIN_AC28 -to top_hsmb_rx_d_n[16]
+set_location_assignment PIN_F27 -to top_hsmb_rx_d_p[0]
+set_location_assignment PIN_G27 -to top_hsmb_rx_d_p[1]
+set_location_assignment PIN_K25 -to top_hsmb_rx_d_p[2]
+set_location_assignment PIN_K27 -to top_hsmb_rx_d_p[3]
+set_location_assignment PIN_L27 -to top_hsmb_rx_d_p[4]
+set_location_assignment PIN_M27 -to top_hsmb_rx_d_p[5]
+set_location_assignment PIN_P25 -to top_hsmb_rx_d_p[6]
+set_location_assignment PIN_P27 -to top_hsmb_rx_d_p[7]
+set_location_assignment PIN_P21 -to top_hsmb_rx_d_p[8]
+set_location_assignment PIN_R22 -to top_hsmb_rx_d_p[9]
+set_location_assignment PIN_T25 -to top_hsmb_rx_d_p[10]
+set_location_assignment PIN_U27 -to top_hsmb_rx_d_p[11]
+set_location_assignment PIN_U22 -to top_hsmb_rx_d_p[12]
+set_location_assignment PIN_W28 -to top_hsmb_rx_d_p[13]
+set_location_assignment PIN_V23 -to top_hsmb_rx_d_p[14]
+set_location_assignment PIN_AB27 -to top_hsmb_rx_d_p[15]
+set_location_assignment PIN_AC27 -to top_hsmb_rx_d_p[16]
+set_location_assignment PIN_J26 -to top_hsmb_tx_d_n[0]
+set_location_assignment PIN_L24 -to top_hsmb_tx_d_n[1]
+set_location_assignment PIN_M26 -to top_hsmb_tx_d_n[2]
+set_location_assignment PIN_N26 -to top_hsmb_tx_d_n[3]
+set_location_assignment PIN_R28 -to top_hsmb_tx_d_n[4]
+set_location_assignment PIN_R26 -to top_hsmb_tx_d_n[5]
+set_location_assignment PIN_U26 -to top_hsmb_tx_d_n[6]
+set_location_assignment PIN_V28 -to top_hsmb_tx_d_n[7]
+set_location_assignment PIN_V26 -to top_hsmb_tx_d_n[8]
+set_location_assignment PIN_W26 -to top_hsmb_tx_d_n[9]
+set_location_assignment PIN_Y26 -to top_hsmb_tx_d_n[10]
+set_location_assignment PIN_AA26 -to top_hsmb_tx_d_n[11]
+set_location_assignment PIN_AB26 -to top_hsmb_tx_d_n[12]
+set_location_assignment PIN_Y24 -to top_hsmb_tx_d_n[13]
+set_location_assignment PIN_AE28 -to top_hsmb_tx_d_n[14]
+set_location_assignment PIN_Y22 -to top_hsmb_tx_d_n[15]
+set_location_assignment PIN_W21 -to top_hsmb_tx_d_n[16]
+set_location_assignment PIN_J25 -to top_hsmb_tx_d_p[0]
+set_location_assignment PIN_L23 -to top_hsmb_tx_d_p[1]
+set_location_assignment PIN_M25 -to top_hsmb_tx_d_p[2]
+set_location_assignment PIN_N25 -to top_hsmb_tx_d_p[3]
+set_location_assignment PIN_R27 -to top_hsmb_tx_d_p[4]
+set_location_assignment PIN_R25 -to top_hsmb_tx_d_p[5]
+set_location_assignment PIN_U25 -to top_hsmb_tx_d_p[6]
+set_location_assignment PIN_V27 -to top_hsmb_tx_d_p[7]
+set_location_assignment PIN_V25 -to top_hsmb_tx_d_p[8]
+set_location_assignment PIN_W25 -to top_hsmb_tx_d_p[9]
+set_location_assignment PIN_Y25 -to top_hsmb_tx_d_p[10]
+set_location_assignment PIN_AA25 -to top_hsmb_tx_d_p[11]
+set_location_assignment PIN_AB25 -to top_hsmb_tx_d_p[12]
+set_location_assignment PIN_Y23 -to top_hsmb_tx_d_p[13]
+set_location_assignment PIN_AE27 -to top_hsmb_tx_d_p[14]
+set_location_assignment PIN_W22 -to top_hsmb_tx_d_p[15]
+set_location_assignment PIN_V21 -to top_hsmb_tx_d_p[16]
+set_location_assignment PIN_AA14 -to ddr2bot_active
+set_location_assignment PIN_E10 -to ddr2top_active
+set_location_assignment PIN_AC25 -to enet_led_link1000
+set_location_assignment PIN_D14 -to max2_clk
+set_location_assignment PIN_AB1 -to top_HSMA_SDAT
+set_location_assignment PIN_AB6 -to top_HSMA_ID_I2CSCL
+set_location_assignment PIN_AC1 -to top_HSMA_I2C_SDAT
+set_location_assignment PIN_AC3 -to top_HSMA_I2C_SCLK
+set_location_assignment PIN_AE3 -to top_HSMA_PS2_CLK
+set_location_assignment PIN_AF2 -to top_HSMA_ID_I2CDAT
+set_location_assignment PIN_AG14 -to top_HSMA_AUD_ADCDAT
+set_location_assignment PIN_C2 -to top_HSMA_LCD_DATA[2]
+set_location_assignment PIN_D1 -to top_HSMA_ADC_DCLK
+set_location_assignment PIN_D2 -to top_HSMA_ADC_DIN
+set_location_assignment PIN_D3 -to top_HSMA_LCD_DATA[1]
+set_location_assignment PIN_E1 -to top_HSMA_LCD_DATA[0]
+set_location_assignment PIN_E2 -to top_HSMA_ADC_CS_N
+set_location_assignment PIN_E3 -to top_HSMA_LCD_DATA[6]
+set_location_assignment PIN_F1 -to top_HSMA_LCD_DATA[5]
+set_location_assignment PIN_F2 -to top_HSMA_SCEN
+set_location_assignment PIN_F3 -to top_HSMA_LCD_DATA[7]
+set_location_assignment PIN_F4 -to top_HSMA_MDC
+set_location_assignment PIN_F5 -to top_HSMA_TX_D[3]
+set_location_assignment PIN_G1 -to top_HSMA_TX_D[2]
+set_location_assignment PIN_G2 -to top_HSMA_TX_D[1]
+set_location_assignment PIN_G3 -to top_HSMA_GREST
+set_location_assignment PIN_G4 -to top_HSMA_DEN
+set_location_assignment PIN_G5 -to top_HSMA_VGA_CLOCK
+set_location_assignment PIN_G6 -to top_HSMA_LCD_NCLK
+set_location_assignment PIN_H3 -to top_HSMA_HSYNC
+set_location_assignment PIN_H4 -to top_HSMA_VSYNC
+set_location_assignment PIN_J1 -to top_HSMA_TX_CLK
+set_location_assignment PIN_J2 -to top_HSMA_ADC_PENIRQ_N
+set_location_assignment PIN_J3 -to top_HSMA_ETH_RESET_N
+set_location_assignment PIN_L7 -to top_HSMA_SD_CLK
+set_location_assignment PIN_AC5 -to top_HSMA_SD_CMD
+set_location_assignment PIN_AB2 -to top_HSMA_SD_DAT0
+set_location_assignment PIN_Y3 -to top_HSMA_SD_DAT1
+set_location_assignment PIN_U3 -to top_HSMA_SD_DAT2
+set_location_assignment PIN_V4 -to top_HSMA_SD_DAT3
+set_location_assignment PIN_J4 -to top_HSMA_UART_TXD
+set_location_assignment PIN_J5 -to top_HSMA_LCD_DATA[4]
+set_location_assignment PIN_J6 -to top_HSMA_LCD_DATA[3]
+set_location_assignment PIN_J7 -to top_HSMA_TX_EN
+set_location_assignment PIN_K1 -to top_HSMA_ADC_DOUT
+set_location_assignment PIN_K2 -to top_HSMA_ADC_BUSY
+set_location_assignment PIN_K3 -to top_HSMA_UART_RXD
+set_location_assignment PIN_K4 -to top_HSMA_AUD_BCLK
+set_location_assignment PIN_K7 -to top_HSMA_TX_D[0]
+set_location_assignment PIN_K8 -to top_HSMA_AUD_DACLRCK
+set_location_assignment PIN_L1 -to top_HSMA_RX_DV
+set_location_assignment PIN_L2 -to top_HSMA_RX_COL
+set_location_assignment PIN_L3 -to top_HSMA_RX_D[3]
+set_location_assignment PIN_L4 -to top_HSMA_RX_D[2]
+set_location_assignment PIN_L6 -to top_HSMA_AUD_ADCLRCK
+set_location_assignment PIN_L8 -to top_HSMA_AUD_DACDAT
+set_location_assignment PIN_M1 -to top_HSMA_VGA_DATA[9]
+set_location_assignment PIN_M2 -to top_HSMA_VGA_DATA[8]
+set_location_assignment PIN_M3 -to top_HSMA_VGA_DATA[7]
+set_location_assignment PIN_M4 -to top_HSMA_VGA_DATA[6]
+set_location_assignment PIN_M7 -to top_HSMA_VGA_DATA[3]
+set_location_assignment PIN_M8 -to top_HSMA_VGA_DATA[2]
+set_location_assignment PIN_N3 -to top_HSMA_RX_D[1]
+set_location_assignment PIN_N4 -to top_HSMA_RX_D[0]
+set_location_assignment PIN_P1 -to top_HSMA_VGA_DATA[5]
+set_location_assignment PIN_P2 -to top_HSMA_VGA_DATA[4]
+set_location_assignment PIN_R1 -to top_HSMA_RX_CRS
+set_location_assignment PIN_R2 -to top_HSMA_RX_ERR
+set_location_assignment PIN_R3 -to top_HSMA_VGA_DATA[0]
+set_location_assignment PIN_R4 -to top_HSMA_VGA_DATA[1]
+set_location_assignment PIN_R6 -to top_HSMA_MDIO
+set_location_assignment PIN_R7 -to top_HSMA_PS2_DAT
+set_location_assignment PIN_T3 -to top_HSMA_VGA_SYNC
+set_location_assignment PIN_T4 -to top_HSMA_VGA_BLANK
+set_location_assignment PIN_U1 -to top_HSMA_TD_RESET
+set_location_assignment PIN_U2 -to top_HSMA_TD_D[7]
+set_location_assignment PIN_U3 -to top_HSMA_TD_D[1]
+set_location_assignment PIN_U4 -to top_HSMA_TD_D[2]
+set_location_assignment PIN_U5 -to top_HSMA_TD_HS
+set_location_assignment PIN_U6 -to top_HSMA_TD_VS
+set_location_assignment PIN_V1 -to top_HSMA_TD_D[6]
+set_location_assignment PIN_V2 -to top_HSMA_TD_D[5]
+set_location_assignment PIN_V3 -to top_HSMA_VGA_VS
+set_location_assignment PIN_W1 -to top_HSMA_TD_D[4]
+set_location_assignment PIN_W2 -to top_HSMA_TD_D[3]
+set_location_assignment PIN_Y1 -to top_HSMA_TD_27MHZ
+set_location_assignment PIN_Y2 -to top_HSMA_RX_CLK
+set_location_assignment PIN_Y3 -to top_HSMA_TD_D[0]
+set_location_assignment PIN_Y4 -to top_HSMA_VGA_HS
+set_location_assignment PIN_Y7 -to top_HSMA_AUD_XCK
+set_location_assignment PIN_A15 -to top_HSMB_AUD_ADCDAT
+set_location_assignment PIN_AA25 -to top_HSMB_UART_TXD
+set_location_assignment PIN_V25 -to top_HSMB_SD_CLK
+set_location_assignment PIN_H24 -to top_HSMB_SD_CMD
+set_location_assignment PIN_F27 -to top_HSMB_SD_DAT0
+set_location_assignment PIN_G28 -to top_HSMB_SD_DAT1
+set_location_assignment PIN_K25 -to top_HSMB_SD_DAT2
+set_location_assignment PIN_L23 -to top_HSMB_SD_DAT3
+set_location_assignment PIN_AA26 -to top_HSMB_ETH_RESET_N
+set_location_assignment PIN_AB25 -to top_HSMB_TX_EN
+set_location_assignment PIN_AB26 -to top_HSMB_TX_D[0]
+set_location_assignment PIN_AB27 -to top_HSMB_SCEN
+set_location_assignment PIN_AB28 -to top_HSMB_LCD_DATA[5]
+set_location_assignment PIN_AC26 -to top_HSMB_LCD_NCLK
+set_location_assignment PIN_AC27 -to top_HSMB_LCD_DATA[6]
+set_location_assignment PIN_AC28 -to top_HSMB_LCD_DATA[7]
+set_location_assignment PIN_AD26 -to top_HSMB_VGA_CLOCK
+set_location_assignment PIN_AD27 -to top_HSMB_ADC_DIN
+set_location_assignment PIN_AD28 -to top_HSMB_ADC_DCLK
+set_location_assignment PIN_AE27 -to top_HSMB_TX_D[3]
+set_location_assignment PIN_AE28 -to top_HSMB_MDC
+set_location_assignment PIN_F28 -to top_HSMB_SDAT
+set_location_assignment PIN_G24 -to top_HSMB_ID_I2CSCL
+set_location_assignment PIN_G25 -to top_HSMB_PS2_CLK
+set_location_assignment PIN_G27 -to top_HSMB_VGA_HS
+set_location_assignment PIN_G28 -to top_HSMB_TD_D[0]
+set_location_assignment PIN_H23 -to top_HSMB_ID_I2CDAT
+set_location_assignment PIN_H25 -to top_HSMB_I2C_SCLK
+set_location_assignment PIN_H26 -to top_HSMB_I2C_SDAT
+set_location_assignment PIN_J22 -to top_HSMB_AUD_XCK
+set_location_assignment PIN_J25 -to top_HSMB_PS2_DAT
+set_location_assignment PIN_J26 -to top_HSMB_MDIO
+set_location_assignment PIN_J27 -to top_HSMB_RX_CLK
+set_location_assignment PIN_J28 -to top_HSMB_TD_27MHZ
+set_location_assignment PIN_K25 -to top_HSMB_TD_D[1]
+set_location_assignment PIN_K26 -to top_HSMB_TD_D[2]
+set_location_assignment PIN_K27 -to top_HSMB_TD_D[3]
+set_location_assignment PIN_K28 -to top_HSMB_TD_D[4]
+set_location_assignment PIN_L24 -to top_HSMB_VGA_VS
+set_location_assignment PIN_L27 -to top_HSMB_TD_D[5]
+set_location_assignment PIN_L28 -to top_HSMB_TD_D[6]
+set_location_assignment PIN_M25 -to top_HSMB_VGA_BLANK
+set_location_assignment PIN_M26 -to top_HSMB_VGA_SYNC
+set_location_assignment PIN_M27 -to top_HSMB_TD_D[7]
+set_location_assignment PIN_M28 -to top_HSMB_TD_RESET
+set_location_assignment PIN_N25 -to top_HSMB_VGA_DATA[0]
+set_location_assignment PIN_N26 -to top_HSMB_VGA_DATA[1]
+set_location_assignment PIN_P21 -to top_HSMB_RX_D[0]
+set_location_assignment PIN_P25 -to top_HSMB_TD_VS
+set_location_assignment PIN_P26 -to top_HSMB_TD_HS
+set_location_assignment PIN_P27 -to top_HSMB_RX_ERR
+set_location_assignment PIN_P28 -to top_HSMB_RX_CRS
+set_location_assignment PIN_R21 -to top_HSMB_RX_D[1]
+set_location_assignment PIN_R22 -to top_HSMB_RX_D[2]
+set_location_assignment PIN_R23 -to top_HSMB_RX_D[3]
+set_location_assignment PIN_R25 -to top_HSMB_VGA_DATA[4]
+set_location_assignment PIN_R26 -to top_HSMB_VGA_DATA[5]
+set_location_assignment PIN_R27 -to top_HSMB_VGA_DATA[2]
+set_location_assignment PIN_R28 -to top_HSMB_VGA_DATA[3]
+set_location_assignment PIN_T25 -to top_HSMB_RX_COL
+set_location_assignment PIN_T26 -to top_HSMB_RX_DV
+set_location_assignment PIN_U22 -to top_HSMB_LCD_DATA[3]
+set_location_assignment PIN_U25 -to top_HSMB_VGA_DATA[6]
+set_location_assignment PIN_U26 -to top_HSMB_VGA_DATA[7]
+set_location_assignment PIN_U27 -to top_HSMB_ADC_BUSY
+set_location_assignment PIN_U28 -to top_HSMB_ADC_DOUT
+set_location_assignment PIN_V21 -to top_HSMB_LCD_DATA[1]
+set_location_assignment PIN_V22 -to top_HSMB_LCD_DATA[4]
+set_location_assignment PIN_V23 -to top_HSMB_DEN
+set_location_assignment PIN_V24 -to top_HSMB_GREST
+set_location_assignment PIN_V26 -to top_HSMB_AUD_ADCLRCK
+set_location_assignment PIN_V27 -to top_HSMB_VGA_DATA[8]
+set_location_assignment PIN_V28 -to top_HSMB_VGA_DATA[9]
+set_location_assignment PIN_W21 -to top_HSMB_LCD_DATA[2]
+set_location_assignment PIN_W22 -to top_HSMB_ADC_CS_N
+set_location_assignment PIN_W25 -to top_HSMB_AUD_DACLRCK
+set_location_assignment PIN_W26 -to top_HSMB_AUD_DACDAT
+set_location_assignment PIN_W27 -to top_HSMB_HSYNC
+set_location_assignment PIN_W28 -to top_HSMB_VSYNC
+set_location_assignment PIN_Y22 -to top_HSMB_LCD_DATA[0]
+set_location_assignment PIN_Y23 -to top_HSMB_TX_D[1]
+set_location_assignment PIN_Y24 -to top_HSMB_TX_D[2]
+set_location_assignment PIN_Y25 -to top_HSMB_AUD_BCLK
+set_location_assignment PIN_Y26 -to top_HSMB_UART_RXD
+set_location_assignment PIN_Y27 -to top_HSMB_ADC_PENIRQ_N
+set_location_assignment PIN_Y28 -to top_HSMB_TX_CLK
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to top_ddr2bot_dq
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1244174944 -to top_ddr2bot_dqs
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1651209902 -to top_ddr2top_dq
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1651209902 -to top_ddr2top_dqs
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1381242028 -to top_fsd
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1191024410 -to top_lcd_data
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 1512814441 -to top_usb_fd
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_a
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_b
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_c
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_d
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_e
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_f
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_g
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_dp
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_sel
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_clkout_sma
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_flash_cen
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_flash_rdybsyn
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_flash_resetn
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_fsa
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_fsd
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_advn
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_psn
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_hsma_clk_in0
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_hsmb_clk_in0
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_oe_n_to_the_max2
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_we_n_to_the_max2
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_csn
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_cs_n_to_the_max2
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_wait
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_clkin_125
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_clkin_sma
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_clkin_50
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_usb_ifclk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_seven_seg_minus
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_wen
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_enet_rx_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_user_dipsw
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_user_led
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_user_pb
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_led
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_out_port_from_the_led_pio
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_button
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_flash_oen
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_flash_wen
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_ben
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to top_sram_oen
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsma_rx_d_p
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsmb_rx_d_p
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsma_tx_d_p
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsmb_tx_d_p
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsmb_clk_in_p
+set_instance_assignment -name IO_STANDARD LVDS -to top_hsmb_clk_out_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to top_speaker_out
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk1~_rup_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk1~_rdn_pad
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_led_link1000
+set_instance_assignment -name IO_STANDARD "1.8 V" -to max2_clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_rup_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_rdn_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to ddr2top_active
+set_instance_assignment -name IO_STANDARD "1.8 V" -to ddr2bot_active
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_lcd_rstn
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_hsma_scl
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_hsma_sda
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_sram_psn
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_enet_resetn
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_reset_n
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_user_resetn
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_flash_resetn
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_user_dipsw
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_user_pb
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_button
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_enet_mdc
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_enet_mdio
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_hsmb_scl
+set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to top_hsmb_sda
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to top_hsma_d
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to top_hsmb_d
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2_ck_p
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2_ck_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_dm
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_dq
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_dqs
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_dm
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_dq
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_dqs
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2_ck_p
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2_ck_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2bot_dm
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2bot_dq
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2bot_dqs
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2top_dm
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2top_dq
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to top_ddr2top_dqs
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_a
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_ba
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_wen
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_rasn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_casn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_cke
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_csn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2top_odt
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_a
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_ba
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_wen
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_rasn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_casn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_cke
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_csn
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to top_ddr2bot_odt
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_odt
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_csn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_cke
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_a
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_ba
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_rasn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_casn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2bot_wen
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_odt
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_csn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_cke
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_a
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_ba
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_rasn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_casn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to top_ddr2top_wen
+set_global_assignment -name TOP_LEVEL_ENTITY ep3c120_sram
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name STATE_MACHINE_PROCESSING "ONE-HOT"
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME ON
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT NORMAL
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_m_rx_col_to_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_m_rx_crs_to_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_m_rx_d_to_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_m_rx_en_to_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_m_rx_err_to_the_tse_mac
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to top_m_tx_d_from_the_tse_mac
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to top_m_tx_en_from_the_tse_mac
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to top_m_tx_err_from_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_rx_control_to_the_tse_mac
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to top_rgmii_in_to_the_tse_mac
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to top_tx_control_from_the_tse_mac
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to top_rgmii_out_from_the_tse_mac
+set_instance_assignment -name CLOCK_SETTINGS top_rx_clk_to_the_tse_mac -to top_rx_clk_to_the_tse_mac
+set_global_assignment -name FMAX_REQUIREMENT "125 MHz" -section_id top_rx_clk_to_the_tse_mac
+set_global_assignment -name INCLUDE_EXTERNAL_PIN_DELAYS_IN_FMAX_CALCULATIONS OFF -section_id top_rx_clk_to_the_tse_mac
+set_instance_assignment -name CLOCK_SETTINGS top_tx_clk_to_the_tse_mac -to top_tx_clk_to_the_tse_mac
+set_global_assignment -name FMAX_REQUIREMENT "125 MHz" -section_id top_tx_clk_to_the_tse_mac
+set_global_assignment -name INCLUDE_EXTERNAL_PIN_DELAYS_IN_FMAX_CALCULATIONS OFF -section_id top_tx_clk_to_the_tse_mac
+set_instance_assignment -name MULTICYCLE 5 -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_altsyncram_dpm_fifo:U_RTSM|altsyncram*" -to *
+set_instance_assignment -name MULTICYCLE 5 -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|*" -to *
+set_instance_assignment -name MULTICYCLE 5 -from * -to "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|altera_tse_retransmit_cntl:U_RETR|*"
+set_instance_assignment -name MULTICYCLE 5 -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|half_duplex_ena_reg2" -to *
+set_instance_assignment -name TPD_REQUIREMENT "7 ns" -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|dout_reg_sft" -to "*|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_mac_tx:U_TX|*"
+set_instance_assignment -name TPD_REQUIREMENT "7 ns" -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|eop_sft" -to "*|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_mac_tx:U_TX|*"
+set_instance_assignment -name TPD_REQUIREMENT "7 ns" -from "*|altera_tse_top_w_fifo:U_MAC|altera_tse_tx_min_ff:U_TXFF|sop_reg" -to "*|altera_tse_top_w_fifo:U_MAC|altera_tse_top_1geth:U_GETH|altera_tse_mac_tx:U_TX|*"
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name VERILOG_FILE gmii_mii_mux.v
+set_global_assignment -name VERILOG_FILE ep3c120_sram.v
+set_global_assignment -name QIP_FILE nios/synthesis/nios.qip
+set_global_assignment -name SDC_FILE ddr2_sdram_phy_ddr_timing.sdc
+set_global_assignment -name SDC_FILE ddr2_sdram_1_phy_ddr_timing.sdc
+set_global_assignment -name SDC_FILE cycloneIII_3c120_niosII_video.sdc
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 780
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
