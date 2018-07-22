@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2018-7-21 6:39:36</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1532126376414</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2018-7-22 14:35:27</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1532241327852</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>E:\altera\13.0\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>E:\altera\13.0\project\CycloneIII_3C120\cycloneIII_3c120_niosII_video_sopc.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>E:\altera\13.0\project\ep3c120_sram\nios.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -887,8 +887,14 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pll</slaveDescriptor>
+                <slaveDescriptor>lcd_display</slaveDescriptor>
                 <addressRange>0x10000020 - 0x1000002F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>led_pio</slaveDescriptor>
+                <addressRange>0x10000030 - 0x1000003F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
@@ -896,6 +902,18 @@
                 <slaveDescriptor>performance_counter</slaveDescriptor>
                 <addressRange>0x10000040 - 0x1000005F</addressRange>
                 <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>button_pio</slaveDescriptor>
+                <addressRange>0x10000060 - 0x1000006F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pll</slaveDescriptor>
+                <addressRange>0x10000070 - 0x1000007F</addressRange>
+                <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>

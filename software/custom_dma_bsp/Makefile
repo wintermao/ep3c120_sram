@@ -103,7 +103,7 @@ ACDS_VERSION := 13.0
 # BUILD_NUMBER: 156
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := E:/altera/13.0/project/CycloneIII_3C120/cycloneIII_3c120_niosII_video_sopc.sopcinfo
+SOPC_FILE := E:/altera/13.0/project/ep3c120_sram/nios.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
@@ -231,6 +231,14 @@ altera_avalon_jtag_uart_driver_C_LIB_SRCS := \
 	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_ioctl.c \
 	$(altera_avalon_jtag_uart_driver_SRCS_ROOT)/src/altera_avalon_jtag_uart_fd.c
 
+# altera_avalon_lcd_16207_driver sources root 
+altera_avalon_lcd_16207_driver_SRCS_ROOT := drivers
+
+# altera_avalon_lcd_16207_driver sources 
+altera_avalon_lcd_16207_driver_C_LIB_SRCS := \
+	$(altera_avalon_lcd_16207_driver_SRCS_ROOT)/src/altera_avalon_lcd_16207.c \
+	$(altera_avalon_lcd_16207_driver_SRCS_ROOT)/src/altera_avalon_lcd_16207_fd.c
+
 # altera_avalon_performance_counter_driver sources root 
 altera_avalon_performance_counter_driver_SRCS_ROOT := drivers
 
@@ -239,6 +247,10 @@ altera_avalon_performance_counter_driver_C_LIB_SRCS := \
 	$(altera_avalon_performance_counter_driver_SRCS_ROOT)/src/altera_avalon_performance_counter.c \
 	$(altera_avalon_performance_counter_driver_SRCS_ROOT)/src/perf_print_formatted_report.c
 
+# altera_avalon_pio_driver sources root 
+altera_avalon_pio_driver_SRCS_ROOT := drivers
+
+# altera_avalon_pio_driver sources 
 # altera_avalon_sysid_qsys_driver sources root 
 altera_avalon_sysid_qsys_driver_SRCS_ROOT := drivers
 
@@ -353,6 +365,7 @@ hal_C_LIB_SRCS := \
 COMPONENT_C_LIB_SRCS += \
 	$(altera_avalon_cfi_flash_driver_C_LIB_SRCS) \
 	$(altera_avalon_jtag_uart_driver_C_LIB_SRCS) \
+	$(altera_avalon_lcd_16207_driver_C_LIB_SRCS) \
 	$(altera_avalon_performance_counter_driver_C_LIB_SRCS) \
 	$(altera_avalon_sysid_qsys_driver_C_LIB_SRCS) \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \

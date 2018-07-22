@@ -93,7 +93,11 @@ module ep3c120_sram (
                                         top_fsd,
                                         top_led,
                                         top_oe_n_to_the_max2,
-                                        top_we_n_to_the_max2
+                                        top_we_n_to_the_max2,
+													 top_lcd_d_cn,
+													 top_lcd_wen,
+													 top_lcd_en,
+													 top_lcd_data
                                      )
 ;
 
@@ -155,6 +159,10 @@ module ep3c120_sram (
   output  [  7: 0] top_led;
   output           top_oe_n_to_the_max2;
   output           top_we_n_to_the_max2;
+  output           top_lcd_d_cn;
+  output           top_lcd_wen;
+  output           top_lcd_en;
+  inout   [  7: 0] top_lcd_data;
   input            top_HSMB_ADC_DOUT;
   input            top_HSMB_ADC_PENIRQ_N;
   input            top_HSMB_RX_CLK;
@@ -322,7 +330,7 @@ module ep3c120_sram (
       //.gm_tx_d_from_the_tse_mac (top_gm_tx_d_from_the_tse_mac),
       //.gm_tx_en_from_the_tse_mac (top_gm_tx_en_from_the_tse_mac),
       //.gm_tx_err_from_the_tse_mac (top_gm_tx_err_from_the_tse_mac),
-      //.in_port_to_the_button_pio (top_in_port_to_the_button_pio),
+      .button_pio_external_connection_export (top_in_port_to_the_button_pio),
      // .in_port_to_the_touch_panel_pen_irq_n (top_HSMB_ADC_PENIRQ_N),
      // .local_init_done_from_the_ddr2_sdram (top_local_init_done_from_the_ddr2_sdram),
       .local_init_done_from_the_ddr_sdram (top_local_init_done_from_the_ddr2_sdram_1),
@@ -371,7 +379,7 @@ module ep3c120_sram (
       //.oe_n_to_the_max2 (top_oe_n_to_the_max2),
       //.out_port_from_the_lcd_i2c_en (top_out_port_from_the_lcd_i2c_en),
       //.out_port_from_the_lcd_i2c_scl (top_out_port_from_the_lcd_i2c_scl),
-      //.out_port_from_the_led_pio (top_led),
+      .led_pio_external_connection_export (top_led),
      // .out_port_from_the_pio_id_eeprom_scl (top_HSMB_ID_I2CSCL),
       .pll_c0_out (top_HSMB_LCD_NCLK),
       .pll_c2_out (top_pll_c2_out),
@@ -387,7 +395,11 @@ module ep3c120_sram (
       //.tx_clk_to_the_tse_mac (top_tx_clk_to_the_tse_mac),
       //.txd_from_the_uart1 (top_HSMB_UART_TXD),
       //.we_n_to_the_max2 (top_we_n_to_the_max2),
-      .write_n_to_the_ext_flash (top_flash_wen)
+      .write_n_to_the_ext_flash (top_flash_wen),
+		.lcd_display_external_RS(top_lcd_d_cn),
+		.lcd_display_external_RW(top_lcd_wen),
+		.lcd_display_external_data(top_lcd_data),
+		.lcd_display_external_E(top_lcd_en)
     );
 
 
