@@ -91,17 +91,12 @@
          type = "long";
       }
    }
-   element performance_counter.control_slave
+   element lcd_display.control_slave
    {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
       datum baseAddress
       {
-         value = "64";
-         type = "long";
+         value = "48";
+         type = "String";
       }
    }
    element sysid.control_slave
@@ -117,12 +112,17 @@
          type = "long";
       }
    }
-   element lcd_display.control_slave
+   element performance_counter.control_slave
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
-         value = "32";
-         type = "String";
+         value = "64";
+         type = "long";
       }
    }
    element cpu
@@ -262,23 +262,7 @@
    {
       datum baseAddress
       {
-         value = "112";
-         type = "String";
-      }
-   }
-   element cpu_ddr_1_clock_bridge.s0
-   {
-      datum baseAddress
-      {
-         value = "201326592";
-         type = "String";
-      }
-   }
-   element flash_ssram_pipeline_bridge.s0
-   {
-      datum baseAddress
-      {
-         value = "0";
+         value = "144";
          type = "String";
       }
    }
@@ -290,11 +274,19 @@
          type = "String";
       }
    }
-   element button_pio.s1
+   element flash_ssram_pipeline_bridge.s0
    {
       datum baseAddress
       {
-         value = "96";
+         value = "0";
+         type = "String";
+      }
+   }
+   element cpu_ddr_1_clock_bridge.s0
+   {
+      datum baseAddress
+      {
+         value = "201326592";
          type = "String";
       }
    }
@@ -302,16 +294,8 @@
    {
       datum baseAddress
       {
-         value = "48";
+         value = "96";
          type = "String";
-      }
-   }
-   element ddr_sdram.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
       }
    }
    element sys_clk_timer.s1
@@ -327,12 +311,44 @@
          type = "long";
       }
    }
+   element ddr_sdram.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
    element high_res_timer.s1
    {
       datum baseAddress
       {
          value = "0";
          type = "String";
+      }
+   }
+   element seven_seg_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "32";
+         type = "String";
+      }
+   }
+   element button_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "112";
+         type = "String";
+      }
+   }
+   element seven_seg_pio
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
       }
    }
    element slow_peripheral_bridge
@@ -406,7 +422,7 @@
  <parameter name="projectName" value="ep3c120_sram.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1532186809549" />
+ <parameter name="timeStamp" value="1532246586598" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -523,6 +539,11 @@
  <interface
    name="lcd_display_external"
    internal="lcd_display.external"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="seven_seg_pio_external_connection"
+   internal="seven_seg_pio.external_connection"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk">
@@ -1133,7 +1154,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4100000' /><slave name='ddr_sdram.s1' start='0xC000000' end='0x10000000' /><slave name='cpu.jtag_debug_module' start='0x11000800' end='0x11001000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4100000' /><slave name='ddr_sdram.s1' start='0xC000000' end='0x10000000' /><slave name='high_res_timer.s1' start='0x10000000' end='0x10000020' /><slave name='lcd_display.control_slave' start='0x10000020' end='0x10000030' /><slave name='led_pio.s1' start='0x10000030' end='0x10000040' /><slave name='performance_counter.control_slave' start='0x10000040' end='0x10000060' /><slave name='button_pio.s1' start='0x10000060' end='0x10000070' /><slave name='pll.pll_slave' start='0x10000070' end='0x10000080' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10000080' end='0x10000088' /><slave name='sys_clk_timer.s1' start='0x10000180' end='0x100001A0' /><slave name='fir_dma.control' start='0x10000360' end='0x10000380' /><slave name='sysid.control_slave' start='0x10000390' end='0x10000398' /><slave name='cpu.jtag_debug_module' start='0x11000800' end='0x11001000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4100000' /><slave name='ddr_sdram.s1' start='0xC000000' end='0x10000000' /><slave name='high_res_timer.s1' start='0x10000000' end='0x10000020' /><slave name='seven_seg_pio.s1' start='0x10000020' end='0x10000030' /><slave name='lcd_display.control_slave' start='0x10000030' end='0x10000040' /><slave name='performance_counter.control_slave' start='0x10000040' end='0x10000060' /><slave name='led_pio.s1' start='0x10000060' end='0x10000070' /><slave name='button_pio.s1' start='0x10000070' end='0x10000080' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10000080' end='0x10000088' /><slave name='pll.pll_slave' start='0x10000090' end='0x100000A0' /><slave name='sys_clk_timer.s1' start='0x10000180' end='0x100001A0' /><slave name='fir_dma.control' start='0x10000360' end='0x10000380' /><slave name='sysid.control_slave' start='0x10000390' end='0x10000398' /><slave name='cpu.jtag_debug_module' start='0x11000800' end='0x11001000' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="deviceFamilyName" value="Cyclone III" />
   <parameter name="internalIrqMaskSystemInfo" value="31" />
@@ -1352,6 +1373,24 @@
    version="13.0.1"
    enabled="1"
    name="lcd_display" />
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1"
+   enabled="1"
+   name="seven_seg_pio">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="16" />
+  <parameter name="clockRate" value="60000000" />
+ </module>
  <connection
    kind="clock"
    version="13.0"
@@ -1910,7 +1949,7 @@
    start="slow_peripheral_bridge.m0"
    end="pll.pll_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0070" />
+  <parameter name="baseAddress" value="0x0090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1983,7 +2022,7 @@
    start="slow_peripheral_bridge.m0"
    end="button_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0060" />
+  <parameter name="baseAddress" value="0x0070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2035,7 +2074,7 @@
    start="slow_peripheral_bridge.m0"
    end="led_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0030" />
+  <parameter name="baseAddress" value="0x0060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2065,7 +2104,7 @@
    start="slow_peripheral_bridge.m0"
    end="lcd_display.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0020" />
+  <parameter name="baseAddress" value="0x0030" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2074,6 +2113,36 @@
    start="cpu.d_irq"
    end="button_pio.irq">
   <parameter name="irqNumber" value="4" />
+ </connection>
+ <connection kind="clock" version="13.0" start="pll.c2" end="seven_seg_pio.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="cpu.jtag_debug_module_reset"
+   end="seven_seg_pio.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="ddr_sdram.reset_request_n"
+   end="seven_seg_pio.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_125.clk_reset"
+   end="seven_seg_pio.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk.clk_reset"
+   end="seven_seg_pio.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="slow_peripheral_bridge.m0"
+   end="seven_seg_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0020" />
+  <parameter name="defaultConnection" value="false" />
  </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />

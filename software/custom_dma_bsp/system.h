@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios'
  * SOPC Builder design path: E:/altera/13.0/project/ep3c120_sram/nios.sopcinfo
  *
- * Generated: Sun Jul 22 14:35:29 CST 2018
+ * Generated: Sun Jul 22 22:51:12 CST 2018
  */
 
 /*
@@ -182,7 +182,7 @@
  */
 
 #define ALT_MODULE_CLASS_button_pio altera_avalon_pio
-#define BUTTON_PIO_BASE 0x10000060
+#define BUTTON_PIO_BASE 0x10000070
 #define BUTTON_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define BUTTON_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_PIO_CAPTURE 1
@@ -310,7 +310,7 @@
  */
 
 #define ALT_MODULE_CLASS_lcd_display altera_avalon_lcd_16207
-#define LCD_DISPLAY_BASE 0x10000020
+#define LCD_DISPLAY_BASE 0x10000030
 #define LCD_DISPLAY_IRQ -1
 #define LCD_DISPLAY_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define LCD_DISPLAY_NAME "/dev/lcd_display"
@@ -324,7 +324,7 @@
  */
 
 #define ALT_MODULE_CLASS_led_pio altera_avalon_pio
-#define LED_PIO_BASE 0x10000030
+#define LED_PIO_BASE 0x10000060
 #define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_PIO_CAPTURE 0
@@ -366,12 +366,39 @@
  */
 
 #define ALT_MODULE_CLASS_pll altpll
-#define PLL_BASE 0x10000070
+#define PLL_BASE 0x10000090
 #define PLL_IRQ -1
 #define PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PLL_NAME "/dev/pll"
 #define PLL_SPAN 16
 #define PLL_TYPE "altpll"
+
+
+/*
+ * seven_seg_pio configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_seven_seg_pio altera_avalon_pio
+#define SEVEN_SEG_PIO_BASE 0x10000020
+#define SEVEN_SEG_PIO_BIT_CLEARING_EDGE_REGISTER 0
+#define SEVEN_SEG_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SEVEN_SEG_PIO_CAPTURE 0
+#define SEVEN_SEG_PIO_DATA_WIDTH 16
+#define SEVEN_SEG_PIO_DO_TEST_BENCH_WIRING 0
+#define SEVEN_SEG_PIO_DRIVEN_SIM_VALUE 0
+#define SEVEN_SEG_PIO_EDGE_TYPE "NONE"
+#define SEVEN_SEG_PIO_FREQ 60000000
+#define SEVEN_SEG_PIO_HAS_IN 0
+#define SEVEN_SEG_PIO_HAS_OUT 1
+#define SEVEN_SEG_PIO_HAS_TRI 0
+#define SEVEN_SEG_PIO_IRQ -1
+#define SEVEN_SEG_PIO_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SEVEN_SEG_PIO_IRQ_TYPE "NONE"
+#define SEVEN_SEG_PIO_NAME "/dev/seven_seg_pio"
+#define SEVEN_SEG_PIO_RESET_VALUE 0
+#define SEVEN_SEG_PIO_SPAN 16
+#define SEVEN_SEG_PIO_TYPE "altera_avalon_pio"
 
 
 /*
@@ -430,7 +457,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1532240544
+#define SYSID_TIMESTAMP 1532266838
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

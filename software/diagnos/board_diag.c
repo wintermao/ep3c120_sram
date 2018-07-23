@@ -586,15 +586,19 @@ static void TestButtons( void )
  * the Seven Segment Display.
  *********************************************/
  
-static void sevenseg_set_hex(alt_u8 hex)
+static void sevenseg_set_hex(alt_u16 hex)
 {
   static alt_u8 segments[16] = {
     0x81, 0xCF, 0x92, 0x86, 0xCC, 0xA4, 0xA0, 0x8F, 0x80, 0x84, /* 0-9 */
     0x88, 0xE0, 0xF2, 0xC2, 0xB0, 0xB8 };                       /* a-f */
 
-  alt_u32 data = segments[hex & 15] | (segments[(hex >> 4) & 15] << 8);
-
-  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, data);
+	alt_u16 seg_data[4],i;
+  for(i=0;i<4;i++)
+  {
+  	seg_data[i]=segments[(hex >>(i*4)) & 0xf ] | 0x100 | ((0xefff<<i)&0xf000);
+  IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, seg_data[i]);
+  usleep(50);
+  }	
 }
 
 /*******************************************
@@ -607,10 +611,10 @@ static void sevenseg_set_hex(alt_u8 hex)
 static void SevenSegCount( void )
 {
   alt_u32 count;
-  for (count = 0; count <= 0xff; count++)
+  for (count = 0; count <= 0xffff; count++)
   {
     sevenseg_set_hex( count );
-    usleep(50000);
+    usleep(500);
   }
 }
 

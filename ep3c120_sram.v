@@ -97,7 +97,17 @@ module ep3c120_sram (
 													 top_lcd_d_cn,
 													 top_lcd_wen,
 													 top_lcd_en,
-													 top_lcd_data
+													 top_lcd_data,
+													top_seven_seg_a,
+													top_seven_seg_b,
+													top_seven_seg_c,
+													top_seven_seg_d,
+													top_seven_seg_e,
+													top_seven_seg_f,
+													top_seven_seg_g,
+													top_seven_seg_dp,
+													top_seven_seg_minus,
+													top_seven_seg_sel													 
                                      )
 ;
 
@@ -163,6 +173,17 @@ module ep3c120_sram (
   output           top_lcd_wen;
   output           top_lcd_en;
   inout   [  7: 0] top_lcd_data;
+  output           top_seven_seg_a;
+  output           top_seven_seg_b;
+  output           top_seven_seg_c;
+  output           top_seven_seg_d;
+  output           top_seven_seg_e;
+  output           top_seven_seg_f;
+  output           top_seven_seg_g;
+  output           top_seven_seg_dp;
+  output           top_seven_seg_minus;
+  output   [ 4: 1] top_seven_seg_sel;
+  
   input            top_HSMB_ADC_DOUT;
   input            top_HSMB_ADC_PENIRQ_N;
   input            top_HSMB_RX_CLK;
@@ -288,6 +309,8 @@ module ep3c120_sram (
   wire             top_set_10_to_the_tse_mac;
   wire             top_tx_clk_to_the_tse_mac;
   wire             top_we_n_to_the_max2;
+  wire    [ 15: 0] top_seven_seg;
+
   nios nios_instance
     (
       //.DEN_from_the_lcd_sync_generator (top_HSMB_DEN),
@@ -399,7 +422,8 @@ module ep3c120_sram (
 		.lcd_display_external_RS(top_lcd_d_cn),
 		.lcd_display_external_RW(top_lcd_wen),
 		.lcd_display_external_data(top_lcd_data),
-		.lcd_display_external_E(top_lcd_en)
+		.lcd_display_external_E(top_lcd_en),
+		.seven_seg_pio_external_connection_export(top_seven_seg)
     );
 
 
@@ -412,6 +436,19 @@ module ep3c120_sram (
   assign top_HSMB_ADC_CS_N = top_SS_n_from_the_touch_panel_spi;
   assign top_HSMB_ADC_DCLK = ~top_SS_n_from_the_touch_panel_spi ? top_SCLK_from_the_touch_panel_spi: (~top_out_port_from_the_lcd_i2c_en ? top_out_port_from_the_lcd_i2c_scl: 0);
   assign top_in_port_to_the_button_pio = top_button;
+  assign top_seven_seg_sel[4] = top_seven_seg[15];
+  assign top_seven_seg_sel[3] = top_seven_seg[14];
+  assign top_seven_seg_sel[2] = top_seven_seg[13];
+  assign top_seven_seg_sel[1] = top_seven_seg[12];
+  assign top_seven_seg_a = top_seven_seg[6];
+  assign top_seven_seg_b = top_seven_seg[5];
+  assign top_seven_seg_c = top_seven_seg[4];
+  assign top_seven_seg_d = top_seven_seg[3];
+  assign top_seven_seg_e = top_seven_seg[2];
+  assign top_seven_seg_f = top_seven_seg[1];
+  assign top_seven_seg_g = top_seven_seg[0];
+  assign top_seven_seg_dp = top_seven_seg[7];
+  assign top_seven_seg_minus = top_seven_seg[8];  
   gmii_mii_mux gmii_mii_mux_instance
     (
       .eth_mode (1'b0),
