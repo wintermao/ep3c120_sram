@@ -154,9 +154,9 @@ module ep3c120_sram (
   output           top_ddr2top_casn;
   output           top_ddr2top_cke;
   output           top_ddr2top_csn;
-  output  [  1: 0] top_ddr2top_dm;
-  inout   [ 15: 0] top_ddr2top_dq;
-  inout   [  1: 0] top_ddr2top_dqs;
+  output  [  3: 0] top_ddr2top_dm;
+  inout   [ 31: 0] top_ddr2top_dq;
+  inout   [  3: 0] top_ddr2top_dqs;
   output           top_ddr2top_odt;
   output           top_ddr2top_rasn;
   output           top_ddr2top_wen;
@@ -253,9 +253,9 @@ module ep3c120_sram (
   wire             top_ddr2top_casn;
   wire             top_ddr2top_cke;
   wire             top_ddr2top_csn;
-  wire    [  1: 0] top_ddr2top_dm;
-  wire    [ 15: 0] top_ddr2top_dq;
-  wire    [  1: 0] top_ddr2top_dqs;
+  wire    [  3: 0] top_ddr2top_dm;
+  wire    [ 31: 0] top_ddr2top_dq;
+  wire    [  3: 0] top_ddr2top_dqs;
   wire             top_ddr2top_odt;
   wire             top_ddr2top_rasn;
   wire             top_ddr2top_wen;

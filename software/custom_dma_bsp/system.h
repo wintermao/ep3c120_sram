@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios'
  * SOPC Builder design path: E:/altera/13.0/project/ep3c120_sram/nios.sopcinfo
  *
- * Generated: Sun Jul 22 22:51:12 CST 2018
+ * Generated: Tue Jul 24 22:45:55 CST 2018
  */
 
 /*
@@ -62,7 +62,7 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_qsys"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x11000820
+#define ALT_CPU_BREAK_ADDR 0x19000820
 #define ALT_CPU_CPU_FREQ 100000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000001
@@ -71,7 +71,7 @@
 #define ALT_CPU_DCACHE_LINE_SIZE 32
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 5
 #define ALT_CPU_DCACHE_SIZE 32768
-#define ALT_CPU_EXCEPTION_ADDR 0xc000020
+#define ALT_CPU_EXCEPTION_ADDR 0x10000020
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 100000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
@@ -87,7 +87,7 @@
 #define ALT_CPU_INST_ADDR_WIDTH 0x1d
 #define ALT_CPU_NAME "cpu"
 #define ALT_CPU_NUM_OF_SHADOW_REG_SETS 0
-#define ALT_CPU_RESET_ADDR 0xc000000
+#define ALT_CPU_RESET_ADDR 0x10000000
 
 
 /*
@@ -96,7 +96,7 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x11000820
+#define NIOS2_BREAK_ADDR 0x19000820
 #define NIOS2_CPU_FREQ 100000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000001
@@ -105,7 +105,7 @@
 #define NIOS2_DCACHE_LINE_SIZE 32
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 5
 #define NIOS2_DCACHE_SIZE 32768
-#define NIOS2_EXCEPTION_ADDR 0xc000020
+#define NIOS2_EXCEPTION_ADDR 0x10000020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
 #define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
@@ -119,7 +119,7 @@
 #define NIOS2_INITDA_SUPPORTED
 #define NIOS2_INST_ADDR_WIDTH 0x1d
 #define NIOS2_NUM_OF_SHADOW_REG_SETS 0
-#define NIOS2_RESET_ADDR 0xc000000
+#define NIOS2_RESET_ADDR 0x10000000
 
 
 /*
@@ -156,19 +156,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x10000080
+#define ALT_STDERR_BASE 0x18000080
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x10000080
+#define ALT_STDIN_BASE 0x18000080
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x10000080
+#define ALT_STDOUT_BASE 0x18000080
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -182,7 +182,7 @@
  */
 
 #define ALT_MODULE_CLASS_button_pio altera_avalon_pio
-#define BUTTON_PIO_BASE 0x10000070
+#define BUTTON_PIO_BASE 0x18000070
 #define BUTTON_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define BUTTON_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTON_PIO_CAPTURE 1
@@ -199,7 +199,7 @@
 #define BUTTON_PIO_IRQ_TYPE "EDGE"
 #define BUTTON_PIO_NAME "/dev/button_pio"
 #define BUTTON_PIO_RESET_VALUE 0
-#define BUTTON_PIO_SPAN 16
+#define BUTTON_PIO_SPAN 32
 #define BUTTON_PIO_TYPE "altera_avalon_pio"
 
 
@@ -209,11 +209,11 @@
  */
 
 #define ALT_MODULE_CLASS_ddr_sdram altmemddr2
-#define DDR_SDRAM_BASE 0xc000000
+#define DDR_SDRAM_BASE 0x10000000
 #define DDR_SDRAM_IRQ -1
 #define DDR_SDRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define DDR_SDRAM_NAME "/dev/ddr_sdram"
-#define DDR_SDRAM_SPAN 67108864
+#define DDR_SDRAM_SPAN 134217728
 #define DDR_SDRAM_TYPE "altmemddr2"
 
 
@@ -242,7 +242,7 @@
  */
 
 #define ALT_MODULE_CLASS_fir_dma pipelined_read_burst_write_fir_dma
-#define FIR_DMA_BASE 0x10000360
+#define FIR_DMA_BASE 0x18000360
 #define FIR_DMA_IRQ 3
 #define FIR_DMA_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define FIR_DMA_NAME "/dev/fir_dma"
@@ -267,7 +267,7 @@
 
 #define ALT_MODULE_CLASS_high_res_timer altera_avalon_timer
 #define HIGH_RES_TIMER_ALWAYS_RUN 0
-#define HIGH_RES_TIMER_BASE 0x10000000
+#define HIGH_RES_TIMER_BASE 0x18000000
 #define HIGH_RES_TIMER_COUNTER_SIZE 32
 #define HIGH_RES_TIMER_FIXED_PERIOD 0
 #define HIGH_RES_TIMER_FREQ 60000000
@@ -280,7 +280,7 @@
 #define HIGH_RES_TIMER_PERIOD_UNITS "us"
 #define HIGH_RES_TIMER_RESET_OUTPUT 0
 #define HIGH_RES_TIMER_SNAPSHOT 1
-#define HIGH_RES_TIMER_SPAN 32
+#define HIGH_RES_TIMER_SPAN 64
 #define HIGH_RES_TIMER_TICKS_PER_SEC 100000.0
 #define HIGH_RES_TIMER_TIMEOUT_PULSE_OUTPUT 0
 #define HIGH_RES_TIMER_TYPE "altera_avalon_timer"
@@ -292,13 +292,13 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x10000080
+#define JTAG_UART_BASE 0x18000080
 #define JTAG_UART_IRQ 2
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
 #define JTAG_UART_READ_DEPTH 8
 #define JTAG_UART_READ_THRESHOLD 4
-#define JTAG_UART_SPAN 8
+#define JTAG_UART_SPAN 16
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 8
 #define JTAG_UART_WRITE_THRESHOLD 4
@@ -310,11 +310,11 @@
  */
 
 #define ALT_MODULE_CLASS_lcd_display altera_avalon_lcd_16207
-#define LCD_DISPLAY_BASE 0x10000030
+#define LCD_DISPLAY_BASE 0x18000030
 #define LCD_DISPLAY_IRQ -1
 #define LCD_DISPLAY_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define LCD_DISPLAY_NAME "/dev/lcd_display"
-#define LCD_DISPLAY_SPAN 16
+#define LCD_DISPLAY_SPAN 32
 #define LCD_DISPLAY_TYPE "altera_avalon_lcd_16207"
 
 
@@ -324,7 +324,7 @@
  */
 
 #define ALT_MODULE_CLASS_led_pio altera_avalon_pio
-#define LED_PIO_BASE 0x10000060
+#define LED_PIO_BASE 0x18000060
 #define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_PIO_CAPTURE 0
@@ -341,7 +341,7 @@
 #define LED_PIO_IRQ_TYPE "NONE"
 #define LED_PIO_NAME "/dev/led_pio"
 #define LED_PIO_RESET_VALUE 0
-#define LED_PIO_SPAN 16
+#define LED_PIO_SPAN 32
 #define LED_PIO_TYPE "altera_avalon_pio"
 
 
@@ -351,12 +351,12 @@
  */
 
 #define ALT_MODULE_CLASS_performance_counter altera_avalon_performance_counter
-#define PERFORMANCE_COUNTER_BASE 0x10000040
+#define PERFORMANCE_COUNTER_BASE 0x18000040
 #define PERFORMANCE_COUNTER_HOW_MANY_SECTIONS 1
 #define PERFORMANCE_COUNTER_IRQ -1
 #define PERFORMANCE_COUNTER_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PERFORMANCE_COUNTER_NAME "/dev/performance_counter"
-#define PERFORMANCE_COUNTER_SPAN 32
+#define PERFORMANCE_COUNTER_SPAN 64
 #define PERFORMANCE_COUNTER_TYPE "altera_avalon_performance_counter"
 
 
@@ -366,7 +366,7 @@
  */
 
 #define ALT_MODULE_CLASS_pll altpll
-#define PLL_BASE 0x10000090
+#define PLL_BASE 0x18000090
 #define PLL_IRQ -1
 #define PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PLL_NAME "/dev/pll"
@@ -380,7 +380,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg_pio altera_avalon_pio
-#define SEVEN_SEG_PIO_BASE 0x10000020
+#define SEVEN_SEG_PIO_BASE 0x18000020
 #define SEVEN_SEG_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG_PIO_CAPTURE 0
@@ -397,7 +397,7 @@
 #define SEVEN_SEG_PIO_IRQ_TYPE "NONE"
 #define SEVEN_SEG_PIO_NAME "/dev/seven_seg_pio"
 #define SEVEN_SEG_PIO_RESET_VALUE 0
-#define SEVEN_SEG_PIO_SPAN 16
+#define SEVEN_SEG_PIO_SPAN 32
 #define SEVEN_SEG_PIO_TYPE "altera_avalon_pio"
 
 
@@ -426,7 +426,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
 #define SYS_CLK_TIMER_ALWAYS_RUN 0
-#define SYS_CLK_TIMER_BASE 0x10000180
+#define SYS_CLK_TIMER_BASE 0x18000180
 #define SYS_CLK_TIMER_COUNTER_SIZE 32
 #define SYS_CLK_TIMER_FIXED_PERIOD 0
 #define SYS_CLK_TIMER_FREQ 60000000
@@ -439,7 +439,7 @@
 #define SYS_CLK_TIMER_PERIOD_UNITS "ms"
 #define SYS_CLK_TIMER_RESET_OUTPUT 0
 #define SYS_CLK_TIMER_SNAPSHOT 1
-#define SYS_CLK_TIMER_SPAN 32
+#define SYS_CLK_TIMER_SPAN 64
 #define SYS_CLK_TIMER_TICKS_PER_SEC 100.0
 #define SYS_CLK_TIMER_TIMEOUT_PULSE_OUTPUT 0
 #define SYS_CLK_TIMER_TYPE "altera_avalon_timer"
@@ -451,13 +451,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x10000390
+#define SYSID_BASE 0x18000390
 #define SYSID_ID 2
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1532266838
+#define SYSID_TIMESTAMP 1532441213
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

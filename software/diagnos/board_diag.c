@@ -595,9 +595,9 @@ static void sevenseg_set_hex(alt_u16 hex)
 	alt_u16 seg_data[4],i;
   for(i=0;i<4;i++)
   {
-  	seg_data[i]=segments[(hex >>(i*4)) & 0xf ] | 0x100 | ((0xefff<<i)&0xf000);
+  	seg_data[i]=segments[(hex >>(i*4)) & 0xf ] | 0x100 | ((0x8000>>i)&0xf000);
   IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG_PIO_BASE, seg_data[i]);
-  usleep(50);
+  usleep(1000);
   }	
 }
 
@@ -611,10 +611,11 @@ static void sevenseg_set_hex(alt_u16 hex)
 static void SevenSegCount( void )
 {
   alt_u32 count;
+  int i;
   for (count = 0; count <= 0xffff; count++)
   {
-    sevenseg_set_hex( count );
-    usleep(500);
+    for(i=0;i<250;i++) sevenseg_set_hex( count );
+    //usleep(100000);
   }
 }
 
