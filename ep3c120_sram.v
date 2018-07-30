@@ -143,9 +143,9 @@ module ep3c120_sram (
   output           top_ddr2bot_casn;
   output           top_ddr2bot_cke;
   output           top_ddr2bot_csn;
-  output  [  1: 0] top_ddr2bot_dm;
-  inout   [ 15: 0] top_ddr2bot_dq;
-  inout   [  1: 0] top_ddr2bot_dqs;
+  output  [  3: 0] top_ddr2bot_dm;
+  inout   [ 31: 0] top_ddr2bot_dq;
+  inout   [  3: 0] top_ddr2bot_dqs;
   output           top_ddr2bot_odt;
   output           top_ddr2bot_rasn;
   output           top_ddr2bot_wen;
@@ -231,20 +231,14 @@ module ep3c120_sram (
   wire             top_cs_n_to_the_max2;
   wire    [  1: 0] top_ddr2_ck_n;
   wire    [  1: 0] top_ddr2_ck_p;
-  wire             top_ddr2_sdram_1_aux_full_rate_clk_out;
-  wire             top_ddr2_sdram_1_aux_half_rate_clk_out;
-  wire             top_ddr2_sdram_1_phy_clk_out;
-  wire             top_ddr2_sdram_aux_full_rate_clk_out;
-  wire             top_ddr2_sdram_aux_half_rate_clk_out;
-  wire             top_ddr2_sdram_phy_clk_out;
   wire    [ 12: 0] top_ddr2bot_a;
   wire    [  1: 0] top_ddr2bot_ba;
   wire             top_ddr2bot_casn;
   wire             top_ddr2bot_cke;
   wire             top_ddr2bot_csn;
-  wire    [  1: 0] top_ddr2bot_dm;
-  wire    [ 15: 0] top_ddr2bot_dq;
-  wire    [  1: 0] top_ddr2bot_dqs;
+  wire    [  3: 0] top_ddr2bot_dm;
+  wire    [ 31: 0] top_ddr2bot_dq;
+  wire    [  3: 0] top_ddr2bot_dqs;
   wire             top_ddr2bot_odt;
   wire             top_ddr2bot_rasn;
   wire             top_ddr2bot_wen;
@@ -277,12 +271,6 @@ module ep3c120_sram (
   wire    [  3: 0] top_in_port_to_the_button_pio;
   wire             top_internal_reset_n;
   wire    [  7: 0] top_led;
-  wire             top_local_init_done_from_the_ddr2_sdram;
-  wire             top_local_init_done_from_the_ddr2_sdram_1;
-  wire             top_local_refresh_ack_from_the_ddr2_sdram;
-  wire             top_local_refresh_ack_from_the_ddr2_sdram_1;
-  wire             top_local_wdata_req_from_the_ddr2_sdram;
-  wire             top_local_wdata_req_from_the_ddr2_sdram_1;
   wire             top_m_rx_col_to_the_tse_mac;
   wire             top_m_rx_crs_to_the_tse_mac;
   wire    [  3: 0] top_m_rx_d_to_the_tse_mac;
@@ -335,12 +323,6 @@ module ep3c120_sram (
       .clk (top_clkin_50),
       .clk_125 (top_clkin_125),
     //  .cs_n_to_the_max2 (top_cs_n_to_the_max2),
-      //.ddr2_sdram_1_aux_full_rate_clk_out (top_ddr2_sdram_1_aux_full_rate_clk_out),
-      //.ddr2_sdram_1_aux_half_rate_clk_out (top_ddr2_sdram_1_aux_half_rate_clk_out),
-      //.ddr2_sdram_1_phy_clk_out (top_ddr2_sdram_1_phy_clk_out),
-      //.ddr2_sdram_aux_full_rate_clk_out (top_ddr2_sdram_aux_full_rate_clk_out),
-      //.ddr2_sdram_aux_half_rate_clk_out (top_ddr2_sdram_aux_half_rate_clk_out),
-      //.ddr2_sdram_phy_clk_out (top_ddr2_sdram_phy_clk_out),
       //.ena_10_from_the_tse_mac (top_ena_10_from_the_tse_mac),
       //.eth_mode_from_the_tse_mac (top_eth_mode_from_the_tse_mac),
       //.flash_tristate_bridge_address (top_fsa_alignment),
@@ -355,12 +337,6 @@ module ep3c120_sram (
       //.gm_tx_err_from_the_tse_mac (top_gm_tx_err_from_the_tse_mac),
       .button_pio_external_connection_export (top_in_port_to_the_button_pio),
      // .in_port_to_the_touch_panel_pen_irq_n (top_HSMB_ADC_PENIRQ_N),
-     // .local_init_done_from_the_ddr2_sdram (top_local_init_done_from_the_ddr2_sdram),
-      .local_init_done_from_the_ddr_sdram (top_local_init_done_from_the_ddr2_sdram_1),
-    //  .local_refresh_ack_from_the_ddr2_sdram (top_local_refresh_ack_from_the_ddr2_sdram),
-      .local_refresh_ack_from_the_ddr_sdram (top_local_refresh_ack_from_the_ddr2_sdram_1),
-     // .local_wdata_req_from_the_ddr2_sdram (top_local_wdata_req_from_the_ddr2_sdram),
-      .local_wdata_req_from_the_ddr_sdram (top_local_wdata_req_from_the_ddr2_sdram_1),
       //.m_rx_col_to_the_tse_mac (top_m_rx_col_to_the_tse_mac),
       //.m_rx_crs_to_the_tse_mac (top_m_rx_crs_to_the_tse_mac),
       //.m_rx_d_to_the_tse_mac (top_m_rx_d_to_the_tse_mac),
@@ -373,43 +349,58 @@ module ep3c120_sram (
      // .mdio_in_to_the_tse_mac (top_mdio_in_to_the_tse_mac),
      // .mdio_oen_from_the_tse_mac (top_mdio_oen_from_the_tse_mac),
      // .mdio_out_from_the_tse_mac (top_mdio_out_from_the_tse_mac),
-      //.mem_addr_from_the_ddr2_sdram (top_ddr2bot_a),
-      .mem_addr_from_the_ddr_sdram (top_ddr2top_a),
-      //.mem_ba_from_the_ddr2_sdram (top_ddr2bot_ba),
-      .mem_ba_from_the_ddr_sdram (top_ddr2top_ba),
-      //.mem_cas_n_from_the_ddr2_sdram (top_ddr2bot_casn),
-      .mem_cas_n_from_the_ddr_sdram (top_ddr2top_casn),
-      //.mem_cke_from_the_ddr2_sdram (top_ddr2bot_cke),
-      .mem_cke_from_the_ddr_sdram (top_ddr2top_cke),
-      //.mem_clk_n_to_and_from_the_ddr2_sdram (top_ddr2_ck_n[0]),
-      .mem_clk_n_to_and_from_the_ddr_sdram (top_ddr2_ck_n[1]),
-      //.mem_clk_to_and_from_the_ddr2_sdram (top_ddr2_ck_p[0]),
-      .mem_clk_to_and_from_the_ddr_sdram (top_ddr2_ck_p[1]),
-      //.mem_cs_n_from_the_ddr2_sdram (top_ddr2bot_csn),
-      .mem_cs_n_from_the_ddr_sdram (top_ddr2top_csn),
-      //.mem_dm_from_the_ddr2_sdram (top_ddr2bot_dm),
-      .mem_dm_from_the_ddr_sdram (top_ddr2top_dm),
-      //.mem_dq_to_and_from_the_ddr2_sdram (top_ddr2bot_dq),
-      .mem_dq_to_and_from_the_ddr_sdram (top_ddr2top_dq),
-      //.mem_dqs_to_and_from_the_ddr2_sdram (top_ddr2bot_dqs),
-      .mem_dqs_to_and_from_the_ddr_sdram (top_ddr2top_dqs),
-      //.mem_odt_from_the_ddr2_sdram (top_ddr2bot_odt),
-      .mem_odt_from_the_ddr_sdram (top_ddr2top_odt),
-     // .mem_ras_n_from_the_ddr2_sdram (top_ddr2bot_rasn),
-      .mem_ras_n_from_the_ddr_sdram (top_ddr2top_rasn),
-     // .mem_we_n_from_the_ddr2_sdram (top_ddr2bot_wen),
-      .mem_we_n_from_the_ddr_sdram (top_ddr2top_wen),
+	   
+		//ddr_top
+	   //.ddr2_top_external_connection_local_refresh_ack(),
+		//.ddr2_top_external_connection_local_init_done(),
+		//.ddr2_top_external_connection_reset_phy_clk_n(),
+      .ddr2_top_memory_mem_odt (top_ddr2top_odt),
+      .ddr2_top_memory_mem_clk (top_ddr2_ck_p[1]),
+      .ddr2_top_memory_mem_clk_n (top_ddr2_ck_n[1]),
+      .ddr2_top_memory_mem_cs_n (top_ddr2top_csn),
+      .ddr2_top_memory_mem_cke (top_ddr2top_cke),
+      .ddr2_top_memory_mem_addr (top_ddr2top_a),
+      .ddr2_top_memory_mem_ba (top_ddr2top_ba),
+      .ddr2_top_memory_mem_ras_n (top_ddr2top_rasn),
+      .ddr2_top_memory_mem_cas_n (top_ddr2top_casn),
+      .ddr2_top_memory_mem_we_n (top_ddr2top_wen),
+      .ddr2_top_memory_mem_dq (top_ddr2top_dq),
+      .ddr2_top_memory_mem_dqs (top_ddr2top_dqs),
+      .ddr2_top_memory_mem_dm (top_ddr2top_dm),
+		//.ddr2_top_auxfull_clk(),
+		//.ddr2_top_auxhalf_clk(),
+		//.sysclk_top_out_clk_clk(),
+		
+		//ddr_bot
+	   //.ddr2_bot_external_connection_local_refresh_ack(),
+		//.ddr2_bot_external_connection_local_init_done(),
+		//.ddr2_bot_external_connection_reset_phy_clk_n(),
+      .ddr2_bot_memory_mem_odt (top_ddr2bot_odt),
+      .ddr2_bot_memory_mem_clk (top_ddr2_ck_p[0]),
+      .ddr2_bot_memory_mem_clk_n (top_ddr2_ck_n[0]),
+      .ddr2_bot_memory_mem_cs_n (top_ddr2bot_csn),
+      .ddr2_bot_memory_mem_cke (top_ddr2bot_cke),
+      .ddr2_bot_memory_mem_addr (top_ddr2bot_a),
+      .ddr2_bot_memory_mem_ba (top_ddr2bot_ba),
+      .ddr2_bot_memory_mem_ras_n (top_ddr2bot_rasn),
+      .ddr2_bot_memory_mem_cas_n (top_ddr2bot_casn),
+      .ddr2_bot_memory_mem_we_n (top_ddr2bot_wen),
+      .ddr2_bot_memory_mem_dq (top_ddr2bot_dq),
+      .ddr2_bot_memory_mem_dqs (top_ddr2bot_dqs),
+      .ddr2_bot_memory_mem_dm (top_ddr2bot_dm),
+		//.ddr2_bot_auxfull_clk(),
+		//.ddr2_bot_auxhalf_clk(),
+		//.sysclk_bot_out_clk_clk(),
+
       //.oe_n_to_the_max2 (top_oe_n_to_the_max2),
       //.out_port_from_the_lcd_i2c_en (top_out_port_from_the_lcd_i2c_en),
       //.out_port_from_the_lcd_i2c_scl (top_out_port_from_the_lcd_i2c_scl),
       .led_pio_external_connection_export (top_led),
-     // .out_port_from_the_pio_id_eeprom_scl (top_HSMB_ID_I2CSCL),
+      //.out_port_from_the_pio_id_eeprom_scl (top_HSMB_ID_I2CSCL),
       .pll_c0_out (top_HSMB_LCD_NCLK),
       .pll_c2_out (top_pll_c2_out),
       .read_n_to_the_ext_flash (top_flash_oen),
-      .reset_n (top_internal_reset_n),
-      //.reset_phy_clk_n_from_the_ddr2_sdram (top_reset_phy_clk_n_from_the_ddr2_sdram),
-      .reset_phy_clk_n_from_the_ddr_sdram (top_reset_phy_clk_n_from_the_ddr2_sdram_1),
+      .merged_resets_in_reset_reset_n (top_internal_reset_n),
      /// .rx_clk_to_the_tse_mac (top_rx_clk_to_the_tse_mac),
       //.rxd_to_the_uart1 (top_HSMB_UART_RXD),
       .select_n_to_the_ext_flash (top_flash_cen),
