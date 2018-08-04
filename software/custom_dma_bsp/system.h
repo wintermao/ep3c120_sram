@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios'
  * SOPC Builder design path: ../../nios.sopcinfo
  *
- * Generated: Tue Jul 31 06:37:54 CST 2018
+ * Generated: Sat Aug 04 16:36:09 CST 2018
  */
 
 /*
@@ -127,6 +127,7 @@
  *
  */
 
+#define __ALTERA_AVALON_DMA
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_LCD_16207
 #define __ALTERA_AVALON_PERFORMANCE_COUNTER
@@ -218,6 +219,19 @@
 
 
 /*
+ * ddr2_bot configuration as viewed by dma_0_write_master
+ *
+ */
+
+#define DMA_0_WRITE_MASTER_DDR2_BOT_BASE 0x18000000
+#define DMA_0_WRITE_MASTER_DDR2_BOT_IRQ -1
+#define DMA_0_WRITE_MASTER_DDR2_BOT_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DMA_0_WRITE_MASTER_DDR2_BOT_NAME "/dev/ddr2_bot"
+#define DMA_0_WRITE_MASTER_DDR2_BOT_SPAN 134217728
+#define DMA_0_WRITE_MASTER_DDR2_BOT_TYPE "altmemddr2"
+
+
+/*
  * ddr2_top configuration
  *
  */
@@ -229,6 +243,40 @@
 #define DDR2_TOP_NAME "/dev/ddr2_top"
 #define DDR2_TOP_SPAN 134217728
 #define DDR2_TOP_TYPE "altmemddr2"
+
+
+/*
+ * ddr2_top configuration as viewed by dma_0_read_master
+ *
+ */
+
+#define DMA_0_READ_MASTER_DDR2_TOP_BASE 0x20000000
+#define DMA_0_READ_MASTER_DDR2_TOP_IRQ -1
+#define DMA_0_READ_MASTER_DDR2_TOP_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define DMA_0_READ_MASTER_DDR2_TOP_NAME "/dev/ddr2_top"
+#define DMA_0_READ_MASTER_DDR2_TOP_SPAN 134217728
+#define DMA_0_READ_MASTER_DDR2_TOP_TYPE "altmemddr2"
+
+
+/*
+ * dma_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_dma_0 altera_avalon_dma
+#define DMA_0_ALLOW_BYTE_TRANSACTIONS 1
+#define DMA_0_ALLOW_DOUBLEWORD_TRANSACTIONS 1
+#define DMA_0_ALLOW_HW_TRANSACTIONS 1
+#define DMA_0_ALLOW_QUADWORD_TRANSACTIONS 1
+#define DMA_0_ALLOW_WORD_TRANSACTIONS 1
+#define DMA_0_BASE 0x29001000
+#define DMA_0_IRQ 5
+#define DMA_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define DMA_0_LENGTHWIDTH 32
+#define DMA_0_MAX_BURST_SIZE 8
+#define DMA_0_NAME "/dev/dma_0"
+#define DMA_0_SPAN 128
+#define DMA_0_TYPE "altera_avalon_dma"
 
 
 /*
@@ -471,7 +519,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1532987049
+#define SYSID_TIMESTAMP 1533368449
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
