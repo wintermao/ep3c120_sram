@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios" kind="nios" version="1.0" fabric="QSYS">
  <!-- Format version 13.0 156 (Future versions may contain additional information.) -->
- <!-- 2018.08.04.15:40:53 -->
+ <!-- 2018.08.05.09:42:54 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1533368449</value>
+  <value>1533433373</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -10446,7 +10446,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>high_res_timer.s1</name>
     <baseAddress>0</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10454,7 +10454,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart.avalon_jtag_slave</name>
     <baseAddress>128</baseAddress>
-    <span>32</span>
+    <span>16</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10462,7 +10462,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>control_slave</slaveName>
     <name>performance_counter.control_slave</name>
     <baseAddress>64</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10470,7 +10470,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>sys_clk_timer.s1</name>
     <baseAddress>384</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10502,7 +10502,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>button_pio.s1</name>
     <baseAddress>112</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10510,7 +10510,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>led_pio.s1</name>
     <baseAddress>96</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10518,7 +10518,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>control_slave</slaveName>
     <name>lcd_display.control_slave</name>
     <baseAddress>48</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -10526,7 +10526,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>seven_seg_pio.s1</name>
     <baseAddress>32</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
   </interface>
  </module>
@@ -10543,7 +10543,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1533368449</value>
+   <value>1533433373</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.id</name>
@@ -10551,7 +10551,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1533368449</value>
+   <value>1533433373</value>
   </assignment>
   <parameter name="id">
    <type>int</type>
@@ -10563,7 +10563,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1533368449</value>
+   <value>1533433373</value>
    <derived>false</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -16769,7 +16769,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>high_res_timer.s1</name>
     <baseAddress>671088640</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16777,7 +16777,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart.avalon_jtag_slave</name>
     <baseAddress>671088768</baseAddress>
-    <span>32</span>
+    <span>16</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16785,7 +16785,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>control_slave</slaveName>
     <name>performance_counter.control_slave</name>
     <baseAddress>671088704</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16793,7 +16793,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>sys_clk_timer.s1</name>
     <baseAddress>671089024</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16825,7 +16825,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>button_pio.s1</name>
     <baseAddress>671088752</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16833,7 +16833,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>led_pio.s1</name>
     <baseAddress>671088736</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16841,7 +16841,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>control_slave</slaveName>
     <name>lcd_display.control_slave</name>
     <baseAddress>671088688</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -16849,7 +16849,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s1</slaveName>
     <name>seven_seg_pio.s1</name>
     <baseAddress>671088672</baseAddress>
-    <span>64</span>
+    <span>32</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>true</isBridge>
@@ -16921,7 +16921,7 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>control_port_slave</slaveName>
     <name>dma_0.control_port_slave</name>
     <baseAddress>687869952</baseAddress>
-    <span>128</span>
+    <span>64</span>
    </memoryBlock>
   </interface>
   <interface name="instruction_master" kind="avalon_master" version="13.0">
@@ -23063,7 +23063,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BL</name>
-   <value>8</value>
+   <value>4</value>
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BT</name>
@@ -23203,7 +23203,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.DAT_DATA_WIDTH</name>
-   <value>128</value>
+   <value>64</value>
   </assignment>
   <assignment>
    <name>postgeneration.simulation.init_file.param_name</name>
@@ -23287,7 +23287,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_drate">
    <type>java.lang.String</type>
-   <value>Half</value>
+   <value>Full</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23303,7 +23303,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_clk_mhz_label">
    <type>java.lang.String</type>
-   <value>76.9</value>
+   <value>153.9</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23479,7 +23479,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_dwidth_label">
    <type>java.lang.String</type>
-   <value>128</value>
+   <value>64</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24143,7 +24143,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="mem_bl">
    <type>java.lang.String</type>
-   <value>8</value>
+   <value>4</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24415,7 +24415,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="max_local_size">
    <type>java.lang.Integer</type>
-   <value>8</value>
+   <value>4</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -25090,7 +25090,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_address</name>
     <direction>Input</direction>
-    <width>23</width>
+    <width>24</width>
     <role>address</role>
    </port>
    <port>
@@ -25120,7 +25120,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_rdata</name>
     <direction>Output</direction>
-    <width>128</width>
+    <width>64</width>
     <role>readdata</role>
    </port>
    <port>
@@ -25132,19 +25132,19 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_wdata</name>
     <direction>Input</direction>
-    <width>128</width>
+    <width>64</width>
     <role>writedata</role>
    </port>
    <port>
     <name>local_be</name>
     <direction>Input</direction>
-    <width>16</width>
+    <width>8</width>
     <role>byteenable</role>
    </port>
    <port>
     <name>local_size</name>
     <direction>Input</direction>
-    <width>4</width>
+    <width>3</width>
     <role>burstcount</role>
    </port>
   </interface>
@@ -25532,7 +25532,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>76925000</value>
+    <value>153850000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -25586,6 +25586,18 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>ddr2_bot_clock_bridge</moduleName>
+    <slaveName>m0_clk</slaveName>
+    <name>ddr2_bot_clock_bridge.m0_clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>true</isBridge>
+    <moduleName>sysclk_bot</moduleName>
+    <slaveName>in_clk</slaveName>
+    <name>sysclk_bot.in_clk</name>
+   </clockDomainMember>
   </interface>
   <interface name="auxfull" kind="clock_source" version="13.0">
    <!-- The connection points exposed by a module instance for the
@@ -25724,18 +25736,6 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>ddr2_bot_clock_bridge</moduleName>
-    <slaveName>m0_clk</slaveName>
-    <name>ddr2_bot_clock_bridge.m0_clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>true</isBridge>
-    <moduleName>sysclk_bot</moduleName>
-    <slaveName>in_clk</slaveName>
-    <name>sysclk_bot.in_clk</name>
-   </clockDomainMember>
   </interface>
  </module>
  <module
@@ -25747,7 +25747,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DATA_WIDTH">
    <type>int</type>
-   <value>128</value>
+   <value>64</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -25779,7 +25779,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="BURSTCOUNT_WIDTH">
    <type>int</type>
-   <value>3</value>
+   <value>1</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -25787,7 +25787,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MAX_BURST_SIZE">
    <type>int</type>
-   <value>4</value>
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -25827,7 +25827,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_M0_CLK_CLOCK_RATE">
    <type>java.lang.Long</type>
-   <value>76925000</value>
+   <value>153850000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -25911,7 +25911,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>76925000</value>
+    <value>153850000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -26412,7 +26412,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_readdata</name>
     <direction>Output</direction>
-    <width>128</width>
+    <width>64</width>
     <role>readdata</role>
    </port>
    <port>
@@ -26424,13 +26424,13 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_burstcount</name>
     <direction>Input</direction>
-    <width>3</width>
+    <width>1</width>
     <role>burstcount</role>
    </port>
    <port>
     <name>s0_writedata</name>
     <direction>Input</direction>
-    <width>128</width>
+    <width>64</width>
     <role>writedata</role>
    </port>
    <port>
@@ -26454,7 +26454,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_byteenable</name>
     <direction>Input</direction>
-    <width>16</width>
+    <width>8</width>
     <role>byteenable</role>
    </port>
    <port>
@@ -26735,7 +26735,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_readdata</name>
     <direction>Input</direction>
-    <width>128</width>
+    <width>64</width>
     <role>readdata</role>
    </port>
    <port>
@@ -26747,13 +26747,13 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_burstcount</name>
     <direction>Output</direction>
-    <width>3</width>
+    <width>1</width>
     <role>burstcount</role>
    </port>
    <port>
     <name>m0_writedata</name>
     <direction>Output</direction>
-    <width>128</width>
+    <width>64</width>
     <role>writedata</role>
    </port>
    <port>
@@ -26777,7 +26777,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_byteenable</name>
     <direction>Output</direction>
-    <width>16</width>
+    <width>8</width>
     <role>byteenable</role>
    </port>
    <port>
@@ -26805,7 +26805,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DERIVED_CLOCK_RATE">
    <type>long</type>
-   <value>76925000</value>
+   <value>153850000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -26889,7 +26889,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>76925000</value>
+    <value>153850000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -26918,7 +26918,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>76925000</value>
+    <value>153850000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -27143,7 +27143,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="writeSlaveDataWidthMax">
    <type>int</type>
-   <value>128</value>
+   <value>64</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -28000,7 +28000,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>read_readdata</name>
     <direction>Input</direction>
-    <width>128</width>
+    <width>64</width>
     <role>readdata</role>
    </port>
    <port>
@@ -28321,13 +28321,13 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>write_writedata</name>
     <direction>Output</direction>
-    <width>128</width>
+    <width>64</width>
     <role>writedata</role>
    </port>
    <port>
     <name>write_byteenable</name>
     <direction>Output</direction>
-    <width>16</width>
+    <width>8</width>
     <role>byteenable</role>
    </port>
    <memoryBlock>
@@ -34116,60 +34116,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s0</endConnectionPoint>
  </connection>
  <connection
-   name="ddr2_bot.auxhalf/ddr2_bot_clock_bridge.m0_clk"
-   kind="clock"
-   version="13.0"
-   start="ddr2_bot.auxhalf"
-   end="ddr2_bot_clock_bridge.m0_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>ddr2_bot</startModule>
-  <startConnectionPoint>auxhalf</startConnectionPoint>
-  <endModule>ddr2_bot_clock_bridge</endModule>
-  <endConnectionPoint>m0_clk</endConnectionPoint>
- </connection>
- <connection
-   name="ddr2_bot.auxhalf/sysclk_bot.in_clk"
-   kind="clock"
-   version="13.0"
-   start="ddr2_bot.auxhalf"
-   end="sysclk_bot.in_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>ddr2_bot</startModule>
-  <startConnectionPoint>auxhalf</startConnectionPoint>
-  <endModule>sysclk_bot</endModule>
-  <endConnectionPoint>in_clk</endConnectionPoint>
- </connection>
- <connection
    name="pll.c0/ddr2_bot_clock_bridge.s0_clk"
    kind="clock"
    version="13.0"
@@ -34545,6 +34491,60 @@ parameters are a RESULT of the module parameters. -->
   <startConnectionPoint>read_master</startConnectionPoint>
   <endModule>ddr2_top_clock_bridge</endModule>
   <endConnectionPoint>s0</endConnectionPoint>
+ </connection>
+ <connection
+   name="ddr2_bot.sysclk/ddr2_bot_clock_bridge.m0_clk"
+   kind="clock"
+   version="13.0"
+   start="ddr2_bot.sysclk"
+   end="ddr2_bot_clock_bridge.m0_clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>ddr2_bot</startModule>
+  <startConnectionPoint>sysclk</startConnectionPoint>
+  <endModule>ddr2_bot_clock_bridge</endModule>
+  <endConnectionPoint>m0_clk</endConnectionPoint>
+ </connection>
+ <connection
+   name="ddr2_bot.sysclk/sysclk_bot.in_clk"
+   kind="clock"
+   version="13.0"
+   start="ddr2_bot.sysclk"
+   end="sysclk_bot.in_clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>ddr2_bot</startModule>
+  <startConnectionPoint>sysclk</startConnectionPoint>
+  <endModule>sysclk_bot</endModule>
+  <endConnectionPoint>in_clk</endConnectionPoint>
  </connection>
  <plugin>
   <instanceCount>25</instanceCount>
