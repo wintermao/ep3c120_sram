@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios'
  * SOPC Builder design path: ../../nios.sopcinfo
  *
- * Generated: Sun Aug 05 10:10:49 CST 2018
+ * Generated: Sun Aug 05 11:04:44 CST 2018
  */
 
 /*
@@ -200,7 +200,7 @@
 #define BUTTON_PIO_IRQ_TYPE "EDGE"
 #define BUTTON_PIO_NAME "/dev/button_pio"
 #define BUTTON_PIO_RESET_VALUE 0
-#define BUTTON_PIO_SPAN 32
+#define BUTTON_PIO_SPAN 64
 #define BUTTON_PIO_TYPE "altera_avalon_pio"
 
 
@@ -275,7 +275,7 @@
 #define DMA_0_LENGTHWIDTH 32
 #define DMA_0_MAX_BURST_SIZE 8
 #define DMA_0_NAME "/dev/dma_0"
-#define DMA_0_SPAN 64
+#define DMA_0_SPAN 128
 #define DMA_0_TYPE "altera_avalon_dma"
 
 
@@ -342,7 +342,7 @@
 #define HIGH_RES_TIMER_PERIOD_UNITS "us"
 #define HIGH_RES_TIMER_RESET_OUTPUT 0
 #define HIGH_RES_TIMER_SNAPSHOT 1
-#define HIGH_RES_TIMER_SPAN 64
+#define HIGH_RES_TIMER_SPAN 128
 #define HIGH_RES_TIMER_TICKS_PER_SEC 100000.0
 #define HIGH_RES_TIMER_TIMEOUT_PULSE_OUTPUT 0
 #define HIGH_RES_TIMER_TYPE "altera_avalon_timer"
@@ -360,7 +360,7 @@
 #define JTAG_UART_NAME "/dev/jtag_uart"
 #define JTAG_UART_READ_DEPTH 8
 #define JTAG_UART_READ_THRESHOLD 4
-#define JTAG_UART_SPAN 16
+#define JTAG_UART_SPAN 32
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 8
 #define JTAG_UART_WRITE_THRESHOLD 4
@@ -376,7 +376,7 @@
 #define LCD_DISPLAY_IRQ -1
 #define LCD_DISPLAY_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define LCD_DISPLAY_NAME "/dev/lcd_display"
-#define LCD_DISPLAY_SPAN 32
+#define LCD_DISPLAY_SPAN 64
 #define LCD_DISPLAY_TYPE "altera_avalon_lcd_16207"
 
 
@@ -403,7 +403,7 @@
 #define LED_PIO_IRQ_TYPE "NONE"
 #define LED_PIO_NAME "/dev/led_pio"
 #define LED_PIO_RESET_VALUE 0
-#define LED_PIO_SPAN 32
+#define LED_PIO_SPAN 64
 #define LED_PIO_TYPE "altera_avalon_pio"
 
 
@@ -418,7 +418,7 @@
 #define PERFORMANCE_COUNTER_IRQ -1
 #define PERFORMANCE_COUNTER_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PERFORMANCE_COUNTER_NAME "/dev/performance_counter"
-#define PERFORMANCE_COUNTER_SPAN 64
+#define PERFORMANCE_COUNTER_SPAN 128
 #define PERFORMANCE_COUNTER_TYPE "altera_avalon_performance_counter"
 
 
@@ -459,7 +459,7 @@
 #define SEVEN_SEG_PIO_IRQ_TYPE "NONE"
 #define SEVEN_SEG_PIO_NAME "/dev/seven_seg_pio"
 #define SEVEN_SEG_PIO_RESET_VALUE 0
-#define SEVEN_SEG_PIO_SPAN 32
+#define SEVEN_SEG_PIO_SPAN 64
 #define SEVEN_SEG_PIO_TYPE "altera_avalon_pio"
 
 
@@ -501,7 +501,7 @@
 #define SYS_CLK_TIMER_PERIOD_UNITS "ms"
 #define SYS_CLK_TIMER_RESET_OUTPUT 0
 #define SYS_CLK_TIMER_SNAPSHOT 1
-#define SYS_CLK_TIMER_SPAN 64
+#define SYS_CLK_TIMER_SPAN 128
 #define SYS_CLK_TIMER_TICKS_PER_SEC 100.0
 #define SYS_CLK_TIMER_TIMEOUT_PULSE_OUTPUT 0
 #define SYS_CLK_TIMER_TYPE "altera_avalon_timer"
@@ -519,7 +519,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1533433373
+#define SYSID_TIMESTAMP 1533436301
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

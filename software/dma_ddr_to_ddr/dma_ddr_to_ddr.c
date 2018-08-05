@@ -81,7 +81,7 @@ int main()
 
 	//start send
 	alt_dcache_flush_all(); //cache sync to memory
-	alt_dma_txchan_ioctl(txchan, ALT_DMA_SET_MODE_128,NULL);  //set 32bit mode
+	alt_dma_txchan_ioctl(txchan, ALT_DMA_SET_MODE_8,NULL);  //set 32bit mode
 	dma_init(txchan,rxchan,ddr_dword1,ddr_dword2,size_byte);
 	Timer_Initial();
 	/*
