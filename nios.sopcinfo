@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios" kind="nios" version="1.0" fabric="QSYS">
  <!-- Format version 13.0 156 (Future versions may contain additional information.) -->
- <!-- 2018.08.05.10:31:42 -->
+ <!-- 2018.08.05.12:20:18 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1533436301</value>
+  <value>1533442817</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -800,7 +800,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BL</name>
-   <value>4</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BT</name>
@@ -940,7 +940,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.DAT_DATA_WIDTH</name>
-   <value>64</value>
+   <value>128</value>
   </assignment>
   <assignment>
    <name>postgeneration.simulation.init_file.param_name</name>
@@ -1024,7 +1024,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_drate">
    <type>java.lang.String</type>
-   <value>Full</value>
+   <value>Half</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1040,7 +1040,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_clk_mhz_label">
    <type>java.lang.String</type>
-   <value>153.9</value>
+   <value>76.9</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1216,7 +1216,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_dwidth_label">
    <type>java.lang.String</type>
-   <value>64</value>
+   <value>128</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1880,7 +1880,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="mem_bl">
    <type>java.lang.String</type>
-   <value>4</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2152,7 +2152,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="max_local_size">
    <type>java.lang.Integer</type>
-   <value>4</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2827,7 +2827,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_address</name>
     <direction>Input</direction>
-    <width>24</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>
@@ -2857,7 +2857,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_rdata</name>
     <direction>Output</direction>
-    <width>64</width>
+    <width>128</width>
     <role>readdata</role>
    </port>
    <port>
@@ -2869,19 +2869,19 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_wdata</name>
     <direction>Input</direction>
-    <width>64</width>
+    <width>128</width>
     <role>writedata</role>
    </port>
    <port>
     <name>local_be</name>
     <direction>Input</direction>
-    <width>8</width>
+    <width>16</width>
     <role>byteenable</role>
    </port>
    <port>
     <name>local_size</name>
     <direction>Input</direction>
-    <width>3</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
   </interface>
@@ -3269,7 +3269,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -3323,18 +3323,6 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>ddr2_top_clock_bridge</moduleName>
-    <slaveName>m0_clk</slaveName>
-    <name>ddr2_top_clock_bridge.m0_clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>true</isBridge>
-    <moduleName>sysclk_top</moduleName>
-    <slaveName>in_clk</slaveName>
-    <name>sysclk_top.in_clk</name>
-   </clockDomainMember>
   </interface>
   <interface name="auxfull" kind="clock_source" version="13.0">
    <!-- The connection points exposed by a module instance for the
@@ -3473,6 +3461,18 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>ddr2_top_clock_bridge</moduleName>
+    <slaveName>m0_clk</slaveName>
+    <name>ddr2_top_clock_bridge.m0_clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>true</isBridge>
+    <moduleName>sysclk_top</moduleName>
+    <slaveName>in_clk</slaveName>
+    <name>sysclk_top.in_clk</name>
+   </clockDomainMember>
   </interface>
  </module>
  <module
@@ -8375,7 +8375,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="BURSTCOUNT_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8383,7 +8383,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MAX_BURST_SIZE">
    <type>int</type>
-   <value>1</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8423,7 +8423,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_M0_CLK_CLOCK_RATE">
    <type>java.lang.Long</type>
-   <value>153850000</value>
+   <value>76925000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8507,7 +8507,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -9020,7 +9020,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_burstcount</name>
     <direction>Input</direction>
-    <width>1</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
    <port>
@@ -9343,7 +9343,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_burstcount</name>
     <direction>Output</direction>
-    <width>1</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
    <port>
@@ -10543,7 +10543,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1533436301</value>
+   <value>1533442817</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.id</name>
@@ -10551,7 +10551,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1533436301</value>
+   <value>1533442817</value>
   </assignment>
   <parameter name="id">
    <type>int</type>
@@ -10563,7 +10563,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1533436301</value>
+   <value>1533442817</value>
    <derived>false</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -11612,7 +11612,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_CLOCK_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -11620,7 +11620,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_RESET_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -12633,7 +12633,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_CLOCK_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -12641,7 +12641,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_RESET_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -13855,7 +13855,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_CLOCK_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -13863,7 +13863,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_RESET_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>15</value>
+   <value>14</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -15013,7 +15013,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DERIVED_CLOCK_RATE">
    <type>long</type>
-   <value>153850000</value>
+   <value>76925000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15097,7 +15097,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -15126,7 +15126,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -23063,7 +23063,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BL</name>
-   <value>4</value>
+   <value>8</value>
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.MEM_BT</name>
@@ -23203,7 +23203,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>testbench.partner.my_partner.parameter.DAT_DATA_WIDTH</name>
-   <value>64</value>
+   <value>128</value>
   </assignment>
   <assignment>
    <name>postgeneration.simulation.init_file.param_name</name>
@@ -23287,7 +23287,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_drate">
    <type>java.lang.String</type>
-   <value>Full</value>
+   <value>Half</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23303,7 +23303,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_clk_mhz_label">
    <type>java.lang.String</type>
-   <value>153.9</value>
+   <value>76.9</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23479,7 +23479,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="local_if_dwidth_label">
    <type>java.lang.String</type>
-   <value>64</value>
+   <value>128</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24143,7 +24143,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="mem_bl">
    <type>java.lang.String</type>
-   <value>4</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24415,7 +24415,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="max_local_size">
    <type>java.lang.Integer</type>
-   <value>4</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -25090,7 +25090,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_address</name>
     <direction>Input</direction>
-    <width>24</width>
+    <width>23</width>
     <role>address</role>
    </port>
    <port>
@@ -25120,7 +25120,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_rdata</name>
     <direction>Output</direction>
-    <width>64</width>
+    <width>128</width>
     <role>readdata</role>
    </port>
    <port>
@@ -25132,19 +25132,19 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>local_wdata</name>
     <direction>Input</direction>
-    <width>64</width>
+    <width>128</width>
     <role>writedata</role>
    </port>
    <port>
     <name>local_be</name>
     <direction>Input</direction>
-    <width>8</width>
+    <width>16</width>
     <role>byteenable</role>
    </port>
    <port>
     <name>local_size</name>
     <direction>Input</direction>
-    <width>3</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
   </interface>
@@ -25532,7 +25532,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -25586,18 +25586,6 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>ddr2_bot_clock_bridge</moduleName>
-    <slaveName>m0_clk</slaveName>
-    <name>ddr2_bot_clock_bridge.m0_clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>true</isBridge>
-    <moduleName>sysclk_bot</moduleName>
-    <slaveName>in_clk</slaveName>
-    <name>sysclk_bot.in_clk</name>
-   </clockDomainMember>
   </interface>
   <interface name="auxfull" kind="clock_source" version="13.0">
    <!-- The connection points exposed by a module instance for the
@@ -25736,6 +25724,18 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>clk</role>
    </port>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>ddr2_bot_clock_bridge</moduleName>
+    <slaveName>m0_clk</slaveName>
+    <name>ddr2_bot_clock_bridge.m0_clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>true</isBridge>
+    <moduleName>sysclk_bot</moduleName>
+    <slaveName>in_clk</slaveName>
+    <name>sysclk_bot.in_clk</name>
+   </clockDomainMember>
   </interface>
  </module>
  <module
@@ -25779,7 +25779,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="BURSTCOUNT_WIDTH">
    <type>int</type>
-   <value>1</value>
+   <value>4</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -25787,7 +25787,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="MAX_BURST_SIZE">
    <type>int</type>
-   <value>1</value>
+   <value>8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -25827,7 +25827,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_M0_CLK_CLOCK_RATE">
    <type>java.lang.Long</type>
-   <value>153850000</value>
+   <value>76925000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -25911,7 +25911,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -26424,7 +26424,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_burstcount</name>
     <direction>Input</direction>
-    <width>1</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
    <port>
@@ -26747,7 +26747,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_burstcount</name>
     <direction>Output</direction>
-    <width>1</width>
+    <width>4</width>
     <role>burstcount</role>
    </port>
    <port>
@@ -26805,7 +26805,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DERIVED_CLOCK_RATE">
    <type>long</type>
-   <value>153850000</value>
+   <value>76925000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -26889,7 +26889,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>java.lang.Long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -26918,7 +26918,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>153850000</value>
+    <value>76925000</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -28503,33 +28503,6 @@ parameters are a RESULT of the module parameters. -->
   <startConnectionPoint>read_master</startConnectionPoint>
   <endModule>flash_ssram_pipeline_bridge</endModule>
   <endConnectionPoint>s0</endConnectionPoint>
- </connection>
- <connection
-   name="ddr2_top.sysclk/ddr2_top_clock_bridge.m0_clk"
-   kind="clock"
-   version="13.0"
-   start="ddr2_top.sysclk"
-   end="ddr2_top_clock_bridge.m0_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>ddr2_top</startModule>
-  <startConnectionPoint>sysclk</startConnectionPoint>
-  <endModule>ddr2_top_clock_bridge</endModule>
-  <endConnectionPoint>m0_clk</endConnectionPoint>
  </connection>
  <connection
    name="ddr2_top_clock_bridge.m0/ddr2_top.s1"
@@ -32263,33 +32236,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="ddr2_top.sysclk/sysclk_top.in_clk"
-   kind="clock"
-   version="13.0"
-   start="ddr2_top.sysclk"
-   end="sysclk_top.in_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>ddr2_top</startModule>
-  <startConnectionPoint>sysclk</startConnectionPoint>
-  <endModule>sysclk_top</endModule>
-  <endConnectionPoint>in_clk</endConnectionPoint>
- </connection>
- <connection
    name="pll.c2/button_pio.clk"
    kind="clock"
    version="13.0"
@@ -34493,10 +34439,64 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s0</endConnectionPoint>
  </connection>
  <connection
-   name="ddr2_bot.sysclk/ddr2_bot_clock_bridge.m0_clk"
+   name="ddr2_top.auxhalf/ddr2_top_clock_bridge.m0_clk"
    kind="clock"
    version="13.0"
-   start="ddr2_bot.sysclk"
+   start="ddr2_top.auxhalf"
+   end="ddr2_top_clock_bridge.m0_clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>ddr2_top</startModule>
+  <startConnectionPoint>auxhalf</startConnectionPoint>
+  <endModule>ddr2_top_clock_bridge</endModule>
+  <endConnectionPoint>m0_clk</endConnectionPoint>
+ </connection>
+ <connection
+   name="ddr2_top.auxhalf/sysclk_top.in_clk"
+   kind="clock"
+   version="13.0"
+   start="ddr2_top.auxhalf"
+   end="sysclk_top.in_clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>ddr2_top</startModule>
+  <startConnectionPoint>auxhalf</startConnectionPoint>
+  <endModule>sysclk_top</endModule>
+  <endConnectionPoint>in_clk</endConnectionPoint>
+ </connection>
+ <connection
+   name="ddr2_bot.auxhalf/ddr2_bot_clock_bridge.m0_clk"
+   kind="clock"
+   version="13.0"
+   start="ddr2_bot.auxhalf"
    end="ddr2_bot_clock_bridge.m0_clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -34515,15 +34515,15 @@ parameters are a RESULT of the module parameters. -->
    <valid>true</valid>
   </parameter>
   <startModule>ddr2_bot</startModule>
-  <startConnectionPoint>sysclk</startConnectionPoint>
+  <startConnectionPoint>auxhalf</startConnectionPoint>
   <endModule>ddr2_bot_clock_bridge</endModule>
   <endConnectionPoint>m0_clk</endConnectionPoint>
  </connection>
  <connection
-   name="ddr2_bot.sysclk/sysclk_bot.in_clk"
+   name="ddr2_bot.auxhalf/sysclk_bot.in_clk"
    kind="clock"
    version="13.0"
-   start="ddr2_bot.sysclk"
+   start="ddr2_bot.auxhalf"
    end="sysclk_bot.in_clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -34542,7 +34542,7 @@ parameters are a RESULT of the module parameters. -->
    <valid>true</valid>
   </parameter>
   <startModule>ddr2_bot</startModule>
-  <startConnectionPoint>sysclk</startConnectionPoint>
+  <startConnectionPoint>auxhalf</startConnectionPoint>
   <endModule>sysclk_bot</endModule>
   <endConnectionPoint>in_clk</endConnectionPoint>
  </connection>

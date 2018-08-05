@@ -171,7 +171,7 @@
       }
       datum megawizard_uipreferences
       {
-         value = "{output_language=VERILOG, output_directory=E:\\altera\\13.0\\project\\ep3c120_sram}";
+         value = "{}";
          type = "String";
       }
    }
@@ -574,11 +574,6 @@
    type="clock"
    dir="start" />
  <interface
-   name="ddr2_top_auxhalf"
-   internal="ddr2_top.auxhalf"
-   type="clock"
-   dir="start" />
- <interface
    name="sysclk_top_out_clk"
    internal="sysclk_top.out_clk"
    type="clock"
@@ -623,9 +618,9 @@
   <parameter name="dedicated_memory_clk_phase_label">Dedicated memory clock phase:</parameter>
   <parameter name="mem_if_clk_mhz" value="153.85" />
   <parameter name="quartus_project_exists" value="false" />
-  <parameter name="local_if_drate" value="Full" />
+  <parameter name="local_if_drate" value="Half" />
   <parameter name="enable_v72_rsu" value="false" />
-  <parameter name="local_if_clk_mhz_label" value="153.9" />
+  <parameter name="local_if_clk_mhz_label" value="76.9" />
   <parameter name="new_variant" value="true" />
   <parameter name="mem_if_memtype" value="DDR2 SDRAM" />
   <parameter name="pll_ref_clk_mhz" value="125.0" />
@@ -647,7 +642,7 @@
   <parameter name="mem_dyn_deskew_en" value="false" />
   <parameter name="post_latency_label">cycles (0 cycles=minimum latency, non-deterministic)</parameter>
   <parameter name="mem_if_dm_pins_en" value="Yes" />
-  <parameter name="local_if_dwidth_label" value="64" />
+  <parameter name="local_if_dwidth_label" value="128" />
   <parameter name="register_control_word_7" value="0000" />
   <parameter name="register_control_word_8" value="0000" />
   <parameter name="mem_if_preset">Micron MT47H32M16CC-3x2</parameter>
@@ -730,7 +725,7 @@
   <parameter name="mp_IH_percent" value="0.6" />
   <parameter name="mem_tcl_15_fmax" value="533.0" />
   <parameter name="dll_external" value="false" />
-  <parameter name="mem_bl" value="4" />
+  <parameter name="mem_bl" value="8" />
   <parameter name="mp_WLS_percent" value="0.7" />
   <parameter name="mem_tcl_50_fmax" value="333.333" />
   <parameter name="mp_DQSCK_percent" value="0.5" />
@@ -764,7 +759,7 @@
   <parameter name="auto_powerdn_en" value="false" />
   <parameter name="phy_if_type_afi" value="true" />
   <parameter name="controller_type" value="ngv110_ctl" />
-  <parameter name="max_local_size" value="4" />
+  <parameter name="max_local_size" value="8" />
   <parameter name="mem_srtr" value="Normal" />
   <parameter name="mem_mpr_loc" value="Predefined Pattern" />
   <parameter name="dss_tinit_rst_us" value="200.0" />
@@ -907,12 +902,12 @@
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
-  <parameter name="MAX_BURST_SIZE" value="1" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
   <parameter name="COMMAND_FIFO_DEPTH" value="8" />
   <parameter name="RESPONSE_FIFO_DEPTH" value="64" />
   <parameter name="MASTER_SYNC_DEPTH" value="3" />
   <parameter name="SLAVE_SYNC_DEPTH" value="3" />
-  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="153850000" />
+  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="76925000" />
   <parameter name="AUTO_S0_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
@@ -964,8 +959,8 @@
   <parameter name="SIGNAL_ORIGIN_LIST">address,read_n,write_n,data,chipselect_n,chipselect_n,byteenable_n,outputenable_n,write_n,data,address,reset_n,begintransfer_n</parameter>
   <parameter name="SHARED_SIGNAL_LIST">flash_ssram_tristate_bridge_address,read_n_to_the_ext_flash,write_n_to_the_ext_flash,flash_ssram_tristate_bridge_data,select_n_to_the_ext_flash,chipenable1_n_to_the_ssram,bw_n_to_the_ssram,outputenable_n_to_the_ssram,bwe_n_to_the_ssram,flash_ssram_tristate_bridge_data,address_to_the_ssram,reset_n_to_the_ssram,adsc_n_to_the_ssram</parameter>
   <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="15" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="15" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="14" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="14" />
   <parameter name="AUTO_TRISTATECONDUIT_MASTERS"><![CDATA[<info><slave name="tcs0"><master name="ssram.tcm"><port role="write_n_out" direction="output" width="1" /><port role="begintransfer_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="outputenable_n_out" direction="output" width="1" /><port role="reset_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="20" /><port role="byteenable_n_out" direction="output" width="4" /><port role="data_out" direction="output" width="32" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="32" /></master></slave><slave name="tcs1"><master name="ext_flash.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="26" /><port role="data_out" direction="output" width="16" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="16" /></master></slave></info>]]></parameter>
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
   <parameter name="AUTO_DEVICE" value="EP3C120F780C7" />
@@ -1021,8 +1016,8 @@
   <parameter name="INTERFACE_ASSIGNMENT_KEYS">embeddedsw.configuration.isMemoryDevice</parameter>
   <parameter name="INTERFACE_ASSIGNMENT_VALUES" value="1" />
   <parameter name="CLOCK_RATE" value="100000000" />
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="15" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="15" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="14" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="14" />
   <parameter name="AUTO_TRISTATECONDUIT_MASTERS" value="" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
   <parameter name="AUTO_DEVICE" value="EP3C120F780C7" />
@@ -1078,8 +1073,8 @@
   <parameter name="INTERFACE_ASSIGNMENT_KEYS">embeddedsw.configuration.isFlash,embeddedsw.configuration.isMemoryDevice,embeddedsw.configuration.isNonVolatileStorage</parameter>
   <parameter name="INTERFACE_ASSIGNMENT_VALUES" value="1,1,1" />
   <parameter name="CLOCK_RATE" value="100000000" />
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="15" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="15" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="14" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="14" />
   <parameter name="AUTO_TRISTATECONDUIT_MASTERS" value="" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
   <parameter name="AUTO_DEVICE" value="EP3C120F780C7" />
@@ -1109,7 +1104,7 @@
    version="13.0"
    enabled="1"
    name="sysclk_top">
-  <parameter name="DERIVED_CLOCK_RATE" value="153850000" />
+  <parameter name="DERIVED_CLOCK_RATE" value="76925000" />
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
@@ -1460,9 +1455,9 @@
   <parameter name="dedicated_memory_clk_phase_label">Dedicated memory clock phase:</parameter>
   <parameter name="mem_if_clk_mhz" value="153.85" />
   <parameter name="quartus_project_exists" value="false" />
-  <parameter name="local_if_drate" value="Full" />
+  <parameter name="local_if_drate" value="Half" />
   <parameter name="enable_v72_rsu" value="false" />
-  <parameter name="local_if_clk_mhz_label" value="153.9" />
+  <parameter name="local_if_clk_mhz_label" value="76.9" />
   <parameter name="new_variant" value="true" />
   <parameter name="mem_if_memtype" value="DDR2 SDRAM" />
   <parameter name="pll_ref_clk_mhz" value="125.0" />
@@ -1484,7 +1479,7 @@
   <parameter name="mem_dyn_deskew_en" value="false" />
   <parameter name="post_latency_label">cycles (0 cycles=minimum latency, non-deterministic)</parameter>
   <parameter name="mem_if_dm_pins_en" value="Yes" />
-  <parameter name="local_if_dwidth_label" value="64" />
+  <parameter name="local_if_dwidth_label" value="128" />
   <parameter name="register_control_word_7" value="0000" />
   <parameter name="register_control_word_8" value="0000" />
   <parameter name="mem_if_preset">Micron MT47H32M16CC-3x2</parameter>
@@ -1567,7 +1562,7 @@
   <parameter name="mp_IH_percent" value="0.6" />
   <parameter name="mem_tcl_15_fmax" value="533.0" />
   <parameter name="dll_external" value="false" />
-  <parameter name="mem_bl" value="4" />
+  <parameter name="mem_bl" value="8" />
   <parameter name="mp_WLS_percent" value="0.7" />
   <parameter name="mem_tcl_50_fmax" value="333.333" />
   <parameter name="mp_DQSCK_percent" value="0.5" />
@@ -1601,7 +1596,7 @@
   <parameter name="auto_powerdn_en" value="false" />
   <parameter name="phy_if_type_afi" value="true" />
   <parameter name="controller_type" value="ngv110_ctl" />
-  <parameter name="max_local_size" value="4" />
+  <parameter name="max_local_size" value="8" />
   <parameter name="mem_srtr" value="Normal" />
   <parameter name="mem_mpr_loc" value="Predefined Pattern" />
   <parameter name="dss_tinit_rst_us" value="200.0" />
@@ -1654,12 +1649,12 @@
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
-  <parameter name="MAX_BURST_SIZE" value="1" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
   <parameter name="COMMAND_FIFO_DEPTH" value="8" />
   <parameter name="RESPONSE_FIFO_DEPTH" value="64" />
   <parameter name="MASTER_SYNC_DEPTH" value="3" />
   <parameter name="SLAVE_SYNC_DEPTH" value="3" />
-  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="153850000" />
+  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="76925000" />
   <parameter name="AUTO_S0_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
@@ -1668,7 +1663,7 @@
    version="13.0"
    enabled="1"
    name="sysclk_bot">
-  <parameter name="DERIVED_CLOCK_RATE" value="153850000" />
+  <parameter name="DERIVED_CLOCK_RATE" value="76925000" />
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
@@ -1712,11 +1707,6 @@
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection
-   kind="clock"
-   version="13.0"
-   start="ddr2_top.sysclk"
-   end="ddr2_top_clock_bridge.m0_clk" />
  <connection
    kind="avalon"
    version="13.0"
@@ -2342,11 +2332,6 @@
    version="13.0"
    start="clk.clk_reset"
    end="button_pio.reset" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="ddr2_top.sysclk"
-   end="sysclk_top.in_clk" />
  <connection kind="clock" version="13.0" start="pll.c2" end="button_pio.clk" />
  <connection kind="clock" version="13.0" start="pll.c2" end="led_pio.clk" />
  <connection
@@ -2719,12 +2704,22 @@
  <connection
    kind="clock"
    version="13.0"
-   start="ddr2_bot.sysclk"
+   start="ddr2_top.auxhalf"
+   end="ddr2_top_clock_bridge.m0_clk" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="ddr2_top.auxhalf"
+   end="sysclk_top.in_clk" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="ddr2_bot.auxhalf"
    end="ddr2_bot_clock_bridge.m0_clk" />
  <connection
    kind="clock"
    version="13.0"
-   start="ddr2_bot.sysclk"
+   start="ddr2_bot.auxhalf"
    end="sysclk_bot.in_clk" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />

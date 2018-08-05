@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2018-8-5 11:04:42</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1533438282379</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2018-8-5 12:49:48</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1533444588314</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>E:\altera\13.0\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios.sopcinfo</SopcDesignFile>

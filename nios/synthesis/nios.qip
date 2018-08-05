@@ -2,7 +2,7 @@ set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "nios" -library "nios" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios.sopcinfo"]
-set_instance_assignment -entity "nios" -library "nios" -name SLD_INFO "QSYS_NAME nios HAS_SOPCINFO 1 GENERATION_ID 1533436301"
+set_instance_assignment -entity "nios" -library "nios" -name SLD_INFO "QSYS_NAME nios HAS_SOPCINFO 1 GENERATION_ID 1533442817"
 set_global_assignment -library "nios" -name MISC_FILE [file join $::quartus(qip_path) "../../nios.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "nios" -name MISC_FILE [file join $::quartus(qip_path) "../../nios.qsys"]
