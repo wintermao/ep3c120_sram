@@ -898,7 +898,7 @@
    version="13.0"
    enabled="1"
    name="ddr2_top_clock_bridge">
-  <parameter name="DATA_WIDTH" value="128" />
+  <parameter name="DATA_WIDTH" value="64" />
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
@@ -1645,7 +1645,7 @@
    version="13.0"
    enabled="1"
    name="ddr2_bot_clock_bridge">
-  <parameter name="DATA_WIDTH" value="128" />
+  <parameter name="DATA_WIDTH" value="64" />
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
@@ -1682,10 +1682,10 @@
   <parameter name="avalonSpec" value="2.0" />
   <parameter name="readAddressMap"><![CDATA[<address-map><slave name='ddr2_top.s1' start='0x20000000' end='0x28000000' /></address-map>]]></parameter>
   <parameter name="readSlaveAddressWidthMax" value="30" />
-  <parameter name="readSlaveDataWidthMax" value="128" />
+  <parameter name="readSlaveDataWidthMax" value="64" />
   <parameter name="writeAddressMap"><![CDATA[<address-map><slave name='ddr2_bot.s1' start='0x18000000' end='0x20000000' /></address-map>]]></parameter>
   <parameter name="writeSlaveAddressWidthMax" value="29" />
-  <parameter name="writeSlaveDataWidthMax" value="128" />
+  <parameter name="writeSlaveDataWidthMax" value="64" />
  </module>
  <connection kind="clock" version="13.0" start="clk_125.clk" end="ddr2_top.refclk" />
  <connection kind="clock" version="13.0" start="clk.clk" end="fir_dma.clock" />

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2018-8-5 12:49:48</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1533444588314</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2018-8-6 6:16:54</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1533507414744</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>E:\altera\13.0\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios.sopcinfo</SopcDesignFile>
@@ -888,44 +888,44 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>high_res_timer</slaveDescriptor>
-                <addressRange>0x28000000 - 0x2800007F</addressRange>
-                <addressSpan>128</addressSpan>
+                <addressRange>0x28000000 - 0x2800003F</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>seven_seg_pio</slaveDescriptor>
-                <addressRange>0x28000020 - 0x2800005F</addressRange>
-                <addressSpan>64</addressSpan>
+                <addressRange>0x28000020 - 0x2800003F</addressRange>
+                <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>lcd_display</slaveDescriptor>
-                <addressRange>0x28000030 - 0x2800006F</addressRange>
-                <addressSpan>64</addressSpan>
+                <addressRange>0x28000030 - 0x2800004F</addressRange>
+                <addressSpan>32</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>performance_counter</slaveDescriptor>
-                <addressRange>0x28000040 - 0x280000BF</addressRange>
-                <addressSpan>128</addressSpan>
+                <addressRange>0x28000040 - 0x2800007F</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>led_pio</slaveDescriptor>
-                <addressRange>0x28000060 - 0x2800009F</addressRange>
-                <addressSpan>64</addressSpan>
+                <addressRange>0x28000060 - 0x2800007F</addressRange>
+                <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>button_pio</slaveDescriptor>
-                <addressRange>0x28000070 - 0x280000AF</addressRange>
-                <addressSpan>64</addressSpan>
+                <addressRange>0x28000070 - 0x2800008F</addressRange>
+                <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x28000080 - 0x2800009F</addressRange>
-                <addressSpan>32</addressSpan>
+                <addressRange>0x28000080 - 0x2800008F</addressRange>
+                <addressSpan>16</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
@@ -936,8 +936,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sys_clk_timer</slaveDescriptor>
-                <addressRange>0x28000180 - 0x280001FF</addressRange>
-                <addressSpan>128</addressSpan>
+                <addressRange>0x28000180 - 0x280001BF</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
@@ -954,8 +954,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>dma_0</slaveDescriptor>
-                <addressRange>0x29001000 - 0x2900107F</addressRange>
-                <addressSpan>128</addressSpan>
+                <addressRange>0x29001000 - 0x2900103F</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>
