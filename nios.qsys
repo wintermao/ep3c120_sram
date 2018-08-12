@@ -49,6 +49,14 @@
          type = "int";
       }
    }
+   element clk
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
    element flash_ssram_pipeline_bridge.clk
    {
       datum _lockedAddress
@@ -60,14 +68,6 @@
       {
          value = "268435456";
          type = "long";
-      }
-   }
-   element clk
-   {
-      datum _sortIndex
-      {
-         value = "0";
-         type = "int";
       }
    }
    element clk_125
@@ -95,7 +95,15 @@
    {
       datum baseAddress
       {
-         value = "687869952";
+         value = "553652224";
+         type = "String";
+      }
+   }
+   element lcd_display.control_slave
+   {
+      datum baseAddress
+      {
+         value = "48";
          type = "String";
       }
    }
@@ -123,14 +131,6 @@
       {
          value = "64";
          type = "long";
-      }
-   }
-   element lcd_display.control_slave
-   {
-      datum baseAddress
-      {
-         value = "48";
-         type = "String";
       }
    }
    element cpu
@@ -171,7 +171,7 @@
       }
       datum megawizard_uipreferences
       {
-         value = "{}";
+         value = "{output_language=VERILOG, output_directory=E:\\altera\\13.0\\project\\ep3c120_sram}";
          type = "String";
       }
    }
@@ -248,7 +248,7 @@
       }
       datum baseAddress
       {
-         value = "687867904";
+         value = "553650176";
          type = "String";
       }
    }
@@ -308,11 +308,19 @@
          type = "String";
       }
    }
-   element ddr2_top_clock_bridge.s0
+   element slow_peripheral_bridge.s0
    {
       datum baseAddress
       {
          value = "536870912";
+         type = "String";
+      }
+   }
+   element ddr2_bot_clock_bridge.s0
+   {
+      datum baseAddress
+      {
+         value = "268435456";
          type = "String";
       }
    }
@@ -324,15 +332,7 @@
          type = "String";
       }
    }
-   element slow_peripheral_bridge.s0
-   {
-      datum baseAddress
-      {
-         value = "671088640";
-         type = "String";
-      }
-   }
-   element ddr2_bot_clock_bridge.s0
+   element ddr2_top_clock_bridge.s0
    {
       datum baseAddress
       {
@@ -340,8 +340,21 @@
          type = "String";
       }
    }
-   element ddr2_bot.s1
+   element high_res_timer.s1
    {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+   element ddr2_top.s1
+   {
+      datum _lockedAddress
+      {
+         value = "0";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "0";
@@ -361,21 +374,8 @@
          type = "long";
       }
    }
-   element led_pio.s1
+   element ddr2_bot.s1
    {
-      datum baseAddress
-      {
-         value = "96";
-         type = "String";
-      }
-   }
-   element ddr2_top.s1
-   {
-      datum _lockedAddress
-      {
-         value = "0";
-         type = "boolean";
-      }
       datum baseAddress
       {
          value = "0";
@@ -390,19 +390,19 @@
          type = "String";
       }
    }
-   element high_res_timer.s1
-   {
-      datum baseAddress
-      {
-         value = "0";
-         type = "String";
-      }
-   }
    element seven_seg_pio.s1
    {
       datum baseAddress
       {
          value = "32";
+         type = "String";
+      }
+   }
+   element led_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "96";
          type = "String";
       }
    }
@@ -462,19 +462,19 @@
          type = "int";
       }
    }
-   element ext_flash.uas
-   {
-      datum baseAddress
-      {
-         value = "0";
-         type = "String";
-      }
-   }
    element ssram.uas
    {
       datum baseAddress
       {
          value = "67108864";
+         type = "String";
+      }
+   }
+   element ext_flash.uas
+   {
+      datum baseAddress
+      {
+         value = "0";
          type = "String";
       }
    }
@@ -493,7 +493,7 @@
  <parameter name="projectName" value="ep3c120_sram.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1533352458814" />
+ <parameter name="timeStamp" value="1534066786727" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -507,18 +507,13 @@
      name="flash_ssram_tristate_bridge_address"
      internal="flash_ssram_tristate_bridge_address" />
   <port name="bwe_n_to_the_ssram" internal="bwe_n_to_the_ssram" />
-  <port name="reset_n_to_the_ssram" internal="reset_n_to_the_ssram" />
   <port
      name="chipenable1_n_to_the_ssram"
      internal="chipenable1_n_to_the_ssram" />
   <port name="bw_n_to_the_ssram" internal="bw_n_to_the_ssram" />
   <port
-     name="outputenable_n_to_the_ssram"
-     internal="outputenable_n_to_the_ssram" />
-  <port
      name="flash_ssram_tristate_bridge_data"
      internal="flash_ssram_tristate_bridge_data" />
-  <port name="adsc_n_to_the_ssram" internal="adsc_n_to_the_ssram" />
   <port name="address_to_the_ssram" internal="address_to_the_ssram" />
   <port name="write_n_to_the_ext_flash" internal="write_n_to_the_ext_flash" />
  </interface>
@@ -618,9 +613,9 @@
   <parameter name="dedicated_memory_clk_phase_label">Dedicated memory clock phase:</parameter>
   <parameter name="mem_if_clk_mhz" value="153.85" />
   <parameter name="quartus_project_exists" value="false" />
-  <parameter name="local_if_drate" value="Half" />
+  <parameter name="local_if_drate" value="Full" />
   <parameter name="enable_v72_rsu" value="false" />
-  <parameter name="local_if_clk_mhz_label" value="76.9" />
+  <parameter name="local_if_clk_mhz_label" value="153.9" />
   <parameter name="new_variant" value="true" />
   <parameter name="mem_if_memtype" value="DDR2 SDRAM" />
   <parameter name="pll_ref_clk_mhz" value="125.0" />
@@ -642,7 +637,7 @@
   <parameter name="mem_dyn_deskew_en" value="false" />
   <parameter name="post_latency_label">cycles (0 cycles=minimum latency, non-deterministic)</parameter>
   <parameter name="mem_if_dm_pins_en" value="Yes" />
-  <parameter name="local_if_dwidth_label" value="128" />
+  <parameter name="local_if_dwidth_label" value="64" />
   <parameter name="register_control_word_7" value="0000" />
   <parameter name="register_control_word_8" value="0000" />
   <parameter name="mem_if_preset">Micron MT47H32M16CC-3x2</parameter>
@@ -725,7 +720,7 @@
   <parameter name="mp_IH_percent" value="0.6" />
   <parameter name="mem_tcl_15_fmax" value="533.0" />
   <parameter name="dll_external" value="false" />
-  <parameter name="mem_bl" value="8" />
+  <parameter name="mem_bl" value="4" />
   <parameter name="mp_WLS_percent" value="0.7" />
   <parameter name="mem_tcl_50_fmax" value="333.333" />
   <parameter name="mp_DQSCK_percent" value="0.5" />
@@ -759,7 +754,7 @@
   <parameter name="auto_powerdn_en" value="false" />
   <parameter name="phy_if_type_afi" value="true" />
   <parameter name="controller_type" value="ngv110_ctl" />
-  <parameter name="max_local_size" value="8" />
+  <parameter name="max_local_size" value="4" />
   <parameter name="mem_srtr" value="Normal" />
   <parameter name="mem_mpr_loc" value="Predefined Pattern" />
   <parameter name="dss_tinit_rst_us" value="200.0" />
@@ -902,12 +897,12 @@
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
-  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_BURST_SIZE" value="1" />
   <parameter name="COMMAND_FIFO_DEPTH" value="8" />
   <parameter name="RESPONSE_FIFO_DEPTH" value="64" />
   <parameter name="MASTER_SYNC_DEPTH" value="3" />
   <parameter name="SLAVE_SYNC_DEPTH" value="3" />
-  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="76925000" />
+  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="153850000" />
   <parameter name="AUTO_S0_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
@@ -944,7 +939,7 @@
    version="13.0"
    enabled="1"
    name="flash_ssram_tristate_bridge_bridge_0">
-  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs"><master name="flash_ssram_tristate_bridge_pinSharer_0.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="flash_ssram_tristate_bridge_address" width="26" type="Output" output_name="flash_ssram_tristate_bridge_address" output_enable_name="" input_name="" /><pin role="bw_n_to_the_ssram" width="4" type="Output" output_name="bw_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="adsc_n_to_the_ssram" width="1" type="Output" output_name="adsc_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="bwe_n_to_the_ssram" width="1" type="Output" output_name="bwe_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="chipenable1_n_to_the_ssram" width="1" type="Output" output_name="chipenable1_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="outputenable_n_to_the_ssram" width="1" type="Output" output_name="outputenable_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="address_to_the_ssram" width="20" type="Output" output_name="address_to_the_ssram" output_enable_name="" input_name="" /><pin role="read_n_to_the_ext_flash" width="1" type="Output" output_name="read_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="write_n_to_the_ext_flash" width="1" type="Output" output_name="write_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="reset_n_to_the_ssram" width="1" type="Output" output_name="reset_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="select_n_to_the_ext_flash" width="1" type="Output" output_name="select_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="flash_ssram_tristate_bridge_data" width="32" type="Bidirectional" output_name="flash_ssram_tristate_bridge_data" output_enable_name="flash_ssram_tristate_bridge_data_outen" input_name="flash_ssram_tristate_bridge_data_in" /></master></slave></info>]]></parameter>
+  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs"><master name="flash_ssram_tristate_bridge_pinSharer_0.tcm"><pin role="chipenable1_n_to_the_ssram" width="1" type="Output" output_name="chipenable1_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="ssram_tcm_read_n_out" width="1" type="Output" output_name="ssram_tcm_read_n_out" output_enable_name="" input_name="" /><pin role="flash_ssram_tristate_bridge_address" width="26" type="Output" output_name="flash_ssram_tristate_bridge_address" output_enable_name="" input_name="" /><pin role="address_to_the_ssram" width="23" type="Output" output_name="address_to_the_ssram" output_enable_name="" input_name="" /><pin role="bw_n_to_the_ssram" width="4" type="Output" output_name="bw_n_to_the_ssram" output_enable_name="" input_name="" /><pin role="read_n_to_the_ext_flash" width="1" type="Output" output_name="read_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="write_n_to_the_ext_flash" width="1" type="Output" output_name="write_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="select_n_to_the_ext_flash" width="1" type="Output" output_name="select_n_to_the_ext_flash" output_enable_name="" input_name="" /><pin role="flash_ssram_tristate_bridge_data" width="32" type="Bidirectional" output_name="flash_ssram_tristate_bridge_data" output_enable_name="flash_ssram_tristate_bridge_data_outen" input_name="flash_ssram_tristate_bridge_data_in" /><pin role="bwe_n_to_the_ssram" width="1" type="Output" output_name="bwe_n_to_the_ssram" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
   <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
@@ -953,15 +948,15 @@
    version="13.0"
    enabled="1"
    name="flash_ssram_tristate_bridge_pinSharer_0">
-  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs0"><master name="ssram.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="begintransfer_n" width="1" type="Output" output_name="tcm_begintransfer_n_out" output_enable_name="" input_name="" /><pin role="address" width="20" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="byteenable_n" width="4" type="Output" output_name="tcm_byteenable_n_out" output_enable_name="" input_name="" /><pin role="data" width="32" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="outputenable_n" width="1" type="Output" output_name="tcm_outputenable_n_out" output_enable_name="" input_name="" /><pin role="reset_n" width="1" type="Output" output_name="tcm_reset_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave><slave name="tcs1"><master name="ext_flash.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="26" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="data" width="16" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
+  <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs0"><master name="ssram.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="23" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="byteenable_n" width="4" type="Output" output_name="tcm_byteenable_n_out" output_enable_name="" input_name="" /><pin role="data" width="32" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave><slave name="tcs1"><master name="ext_flash.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="26" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="data" width="16" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
   <parameter name="NUM_INTERFACES" value="2" />
-  <parameter name="MODULE_ORIGIN_LIST">ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm</parameter>
-  <parameter name="SIGNAL_ORIGIN_LIST">address,read_n,write_n,data,chipselect_n,chipselect_n,byteenable_n,outputenable_n,write_n,data,address,reset_n,begintransfer_n</parameter>
-  <parameter name="SHARED_SIGNAL_LIST">flash_ssram_tristate_bridge_address,read_n_to_the_ext_flash,write_n_to_the_ext_flash,flash_ssram_tristate_bridge_data,select_n_to_the_ext_flash,chipenable1_n_to_the_ssram,bw_n_to_the_ssram,outputenable_n_to_the_ssram,bwe_n_to_the_ssram,flash_ssram_tristate_bridge_data,address_to_the_ssram,reset_n_to_the_ssram,adsc_n_to_the_ssram</parameter>
+  <parameter name="MODULE_ORIGIN_LIST">ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ext_flash.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm,ssram.tcm</parameter>
+  <parameter name="SIGNAL_ORIGIN_LIST">address,read_n,write_n,data,chipselect_n,address,byteenable_n,read_n,write_n,data,chipselect_n</parameter>
+  <parameter name="SHARED_SIGNAL_LIST">flash_ssram_tristate_bridge_address,read_n_to_the_ext_flash,write_n_to_the_ext_flash,flash_ssram_tristate_bridge_data,select_n_to_the_ext_flash,address_to_the_ssram,bw_n_to_the_ssram,,bwe_n_to_the_ssram,flash_ssram_tristate_bridge_data,chipenable1_n_to_the_ssram</parameter>
   <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="14" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="14" />
-  <parameter name="AUTO_TRISTATECONDUIT_MASTERS"><![CDATA[<info><slave name="tcs0"><master name="ssram.tcm"><port role="write_n_out" direction="output" width="1" /><port role="begintransfer_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="outputenable_n_out" direction="output" width="1" /><port role="reset_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="20" /><port role="byteenable_n_out" direction="output" width="4" /><port role="data_out" direction="output" width="32" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="32" /></master></slave><slave name="tcs1"><master name="ext_flash.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="26" /><port role="data_out" direction="output" width="16" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="16" /></master></slave></info>]]></parameter>
+  <parameter name="AUTO_TRISTATECONDUIT_MASTERS"><![CDATA[<info><slave name="tcs0"><master name="ssram.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="23" /><port role="byteenable_n_out" direction="output" width="4" /><port role="data_out" direction="output" width="32" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="32" /></master></slave><slave name="tcs1"><master name="ext_flash.tcm"><port role="write_n_out" direction="output" width="1" /><port role="read_n_out" direction="output" width="1" /><port role="chipselect_n_out" direction="output" width="1" /><port role="request" direction="output" width="1" /><port role="grant" direction="input" width="1" /><port role="address_out" direction="output" width="26" /><port role="data_out" direction="output" width="16" /><port role="data_outen" direction="output" width="1" /><port role="data_in" direction="input" width="16" /></master></slave></info>]]></parameter>
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
   <parameter name="AUTO_DEVICE" value="EP3C120F780C7" />
  </module>
@@ -970,46 +965,46 @@
    version="13.0"
    enabled="1"
    name="ssram">
-  <parameter name="TCM_ADDRESS_W" value="20" />
+  <parameter name="TCM_ADDRESS_W" value="23" />
   <parameter name="TCM_DATA_W" value="32" />
   <parameter name="TCM_BYTEENABLE_W" value="4" />
-  <parameter name="TCM_READ_WAIT" value="0" />
-  <parameter name="TCM_WRITE_WAIT" value="0" />
-  <parameter name="TCM_SETUP_WAIT" value="0" />
-  <parameter name="TCM_DATA_HOLD" value="0" />
+  <parameter name="TCM_READ_WAIT" value="200" />
+  <parameter name="TCM_WRITE_WAIT" value="200" />
+  <parameter name="TCM_SETUP_WAIT" value="200" />
+  <parameter name="TCM_DATA_HOLD" value="200" />
   <parameter name="TCM_MAX_PENDING_READ_TRANSACTIONS" value="5" />
   <parameter name="TCM_TURNAROUND_TIME" value="2" />
-  <parameter name="TCM_TIMING_UNITS" value="1" />
+  <parameter name="TCM_TIMING_UNITS" value="0" />
   <parameter name="TCM_READLATENCY" value="4" />
   <parameter name="TCM_SYMBOLS_PER_WORD" value="4" />
   <parameter name="USE_READDATA" value="1" />
   <parameter name="USE_WRITEDATA" value="1" />
-  <parameter name="USE_READ" value="0" />
+  <parameter name="USE_READ" value="1" />
   <parameter name="USE_WRITE" value="1" />
-  <parameter name="USE_BEGINTRANSFER" value="1" />
+  <parameter name="USE_BEGINTRANSFER" value="0" />
   <parameter name="USE_BYTEENABLE" value="1" />
   <parameter name="USE_CHIPSELECT" value="1" />
   <parameter name="USE_LOCK" value="0" />
   <parameter name="USE_ADDRESS" value="1" />
   <parameter name="USE_WAITREQUEST" value="0" />
   <parameter name="USE_WRITEBYTEENABLE" value="0" />
-  <parameter name="USE_OUTPUTENABLE" value="1" />
+  <parameter name="USE_OUTPUTENABLE" value="0" />
   <parameter name="USE_RESETREQUEST" value="0" />
   <parameter name="USE_IRQ" value="0" />
-  <parameter name="USE_RESET_OUTPUT" value="1" />
-  <parameter name="ACTIVE_LOW_READ" value="0" />
+  <parameter name="USE_RESET_OUTPUT" value="0" />
+  <parameter name="ACTIVE_LOW_READ" value="1" />
   <parameter name="ACTIVE_LOW_LOCK" value="0" />
   <parameter name="ACTIVE_LOW_WRITE" value="1" />
   <parameter name="ACTIVE_LOW_CHIPSELECT" value="1" />
   <parameter name="ACTIVE_LOW_BYTEENABLE" value="1" />
-  <parameter name="ACTIVE_LOW_OUTPUTENABLE" value="1" />
+  <parameter name="ACTIVE_LOW_OUTPUTENABLE" value="0" />
   <parameter name="ACTIVE_LOW_WRITEBYTEENABLE" value="0" />
   <parameter name="ACTIVE_LOW_WAITREQUEST" value="0" />
-  <parameter name="ACTIVE_LOW_BEGINTRANSFER" value="1" />
+  <parameter name="ACTIVE_LOW_BEGINTRANSFER" value="0" />
   <parameter name="ACTIVE_LOW_RESETREQUEST" value="0" />
   <parameter name="ACTIVE_LOW_IRQ" value="0" />
-  <parameter name="ACTIVE_LOW_RESET_OUTPUT" value="1" />
-  <parameter name="CHIPSELECT_THROUGH_READLATENCY" value="1" />
+  <parameter name="ACTIVE_LOW_RESET_OUTPUT" value="0" />
+  <parameter name="CHIPSELECT_THROUGH_READLATENCY" value="0" />
   <parameter name="IS_MEMORY_DEVICE" value="1" />
   <parameter name="MODULE_ASSIGNMENT_KEYS">embeddedsw.configuration.hwClassnameDriverSupportList,embeddedsw.CMacro.SRAM_MEMORY_SIZE,embeddedsw.CMacro.SRAM_MEMORY_UNITS,embeddedsw.CMacro.SSRAM_DATA_WIDTH,embeddedsw.CMacro.SSRAM_READ_LATENCY,embeddedsw.memoryInfo.MEM_INIT_DATA_WIDTH,embeddedsw.memoryInfo.HAS_BYTE_LANE,embeddedsw.memoryInfo.GENERATE_DAT_SYM,embeddedsw.memoryInfo.DAT_SYM_INSTALL_DIR</parameter>
   <parameter name="MODULE_ASSIGNMENT_VALUES">altera_avalon_lan91c111:altera_avalon_cfi_flash,1,1048576,32,2,32,1,1,SIM_DIR</parameter>
@@ -1104,7 +1099,7 @@
    version="13.0"
    enabled="1"
    name="sysclk_top">
-  <parameter name="DERIVED_CLOCK_RATE" value="76925000" />
+  <parameter name="DERIVED_CLOCK_RATE" value="153850000" />
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
@@ -1209,8 +1204,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4100000' /><slave name='ddr2_bot.s1' start='0x18000000' end='0x20000000' /><slave name='ddr2_top.s1' start='0x20000000' end='0x28000000' /><slave name='cpu.jtag_debug_module' start='0x29000800' end='0x29001000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4100000' /><slave name='ddr2_bot.s1' start='0x18000000' end='0x20000000' /><slave name='ddr2_top.s1' start='0x20000000' end='0x28000000' /><slave name='high_res_timer.s1' start='0x28000000' end='0x28000020' /><slave name='seven_seg_pio.s1' start='0x28000020' end='0x28000030' /><slave name='lcd_display.control_slave' start='0x28000030' end='0x28000040' /><slave name='performance_counter.control_slave' start='0x28000040' end='0x28000060' /><slave name='led_pio.s1' start='0x28000060' end='0x28000070' /><slave name='button_pio.s1' start='0x28000070' end='0x28000080' /><slave name='jtag_uart.avalon_jtag_slave' start='0x28000080' end='0x28000088' /><slave name='pll.pll_slave' start='0x28000090' end='0x280000A0' /><slave name='sys_clk_timer.s1' start='0x28000180' end='0x280001A0' /><slave name='fir_dma.control' start='0x28000360' end='0x28000380' /><slave name='sysid.control_slave' start='0x28000390' end='0x28000398' /><slave name='cpu.jtag_debug_module' start='0x29000800' end='0x29001000' /><slave name='dma_0.control_port_slave' start='0x29001000' end='0x29001020' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4800000' /><slave name='ddr2_top.s1' start='0x18000000' end='0x20000000' /><slave name='cpu.jtag_debug_module' start='0x21000800' end='0x21001000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ext_flash.uas' start='0x0' end='0x4000000' /><slave name='ssram.uas' start='0x4000000' end='0x4800000' /><slave name='ddr2_bot.s1' start='0x10000000' end='0x18000000' /><slave name='ddr2_top.s1' start='0x18000000' end='0x20000000' /><slave name='high_res_timer.s1' start='0x20000000' end='0x20000020' /><slave name='seven_seg_pio.s1' start='0x20000020' end='0x20000030' /><slave name='lcd_display.control_slave' start='0x20000030' end='0x20000040' /><slave name='performance_counter.control_slave' start='0x20000040' end='0x20000060' /><slave name='led_pio.s1' start='0x20000060' end='0x20000070' /><slave name='button_pio.s1' start='0x20000070' end='0x20000080' /><slave name='jtag_uart.avalon_jtag_slave' start='0x20000080' end='0x20000088' /><slave name='pll.pll_slave' start='0x20000090' end='0x200000A0' /><slave name='sys_clk_timer.s1' start='0x20000180' end='0x200001A0' /><slave name='fir_dma.control' start='0x20000360' end='0x20000380' /><slave name='sysid.control_slave' start='0x20000390' end='0x20000398' /><slave name='cpu.jtag_debug_module' start='0x21000800' end='0x21001000' /><slave name='dma_0.control_port_slave' start='0x21001000' end='0x21001020' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="deviceFamilyName" value="Cyclone III" />
   <parameter name="internalIrqMaskSystemInfo" value="63" />
@@ -1455,9 +1450,9 @@
   <parameter name="dedicated_memory_clk_phase_label">Dedicated memory clock phase:</parameter>
   <parameter name="mem_if_clk_mhz" value="153.85" />
   <parameter name="quartus_project_exists" value="false" />
-  <parameter name="local_if_drate" value="Half" />
+  <parameter name="local_if_drate" value="Full" />
   <parameter name="enable_v72_rsu" value="false" />
-  <parameter name="local_if_clk_mhz_label" value="76.9" />
+  <parameter name="local_if_clk_mhz_label" value="153.9" />
   <parameter name="new_variant" value="true" />
   <parameter name="mem_if_memtype" value="DDR2 SDRAM" />
   <parameter name="pll_ref_clk_mhz" value="125.0" />
@@ -1479,7 +1474,7 @@
   <parameter name="mem_dyn_deskew_en" value="false" />
   <parameter name="post_latency_label">cycles (0 cycles=minimum latency, non-deterministic)</parameter>
   <parameter name="mem_if_dm_pins_en" value="Yes" />
-  <parameter name="local_if_dwidth_label" value="128" />
+  <parameter name="local_if_dwidth_label" value="64" />
   <parameter name="register_control_word_7" value="0000" />
   <parameter name="register_control_word_8" value="0000" />
   <parameter name="mem_if_preset">Micron MT47H32M16CC-3x2</parameter>
@@ -1562,7 +1557,7 @@
   <parameter name="mp_IH_percent" value="0.6" />
   <parameter name="mem_tcl_15_fmax" value="533.0" />
   <parameter name="dll_external" value="false" />
-  <parameter name="mem_bl" value="8" />
+  <parameter name="mem_bl" value="4" />
   <parameter name="mp_WLS_percent" value="0.7" />
   <parameter name="mem_tcl_50_fmax" value="333.333" />
   <parameter name="mp_DQSCK_percent" value="0.5" />
@@ -1596,7 +1591,7 @@
   <parameter name="auto_powerdn_en" value="false" />
   <parameter name="phy_if_type_afi" value="true" />
   <parameter name="controller_type" value="ngv110_ctl" />
-  <parameter name="max_local_size" value="8" />
+  <parameter name="max_local_size" value="4" />
   <parameter name="mem_srtr" value="Normal" />
   <parameter name="mem_mpr_loc" value="Predefined Pattern" />
   <parameter name="dss_tinit_rst_us" value="200.0" />
@@ -1649,12 +1644,12 @@
   <parameter name="SYMBOL_WIDTH" value="8" />
   <parameter name="ADDRESS_WIDTH" value="27" />
   <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
-  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_BURST_SIZE" value="1" />
   <parameter name="COMMAND_FIFO_DEPTH" value="8" />
   <parameter name="RESPONSE_FIFO_DEPTH" value="64" />
   <parameter name="MASTER_SYNC_DEPTH" value="3" />
   <parameter name="SLAVE_SYNC_DEPTH" value="3" />
-  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="76925000" />
+  <parameter name="AUTO_M0_CLK_CLOCK_RATE" value="153850000" />
   <parameter name="AUTO_S0_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
@@ -1663,7 +1658,7 @@
    version="13.0"
    enabled="1"
    name="sysclk_bot">
-  <parameter name="DERIVED_CLOCK_RATE" value="76925000" />
+  <parameter name="DERIVED_CLOCK_RATE" value="153850000" />
   <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
  </module>
@@ -1680,10 +1675,10 @@
   <parameter name="minimumDmaTransactionRegisterWidth" value="32" />
   <parameter name="useRegistersForFIFO" value="false" />
   <parameter name="avalonSpec" value="2.0" />
-  <parameter name="readAddressMap"><![CDATA[<address-map><slave name='ddr2_top.s1' start='0x20000000' end='0x28000000' /></address-map>]]></parameter>
-  <parameter name="readSlaveAddressWidthMax" value="30" />
+  <parameter name="readAddressMap"><![CDATA[<address-map><slave name='ddr2_top.s1' start='0x18000000' end='0x20000000' /></address-map>]]></parameter>
+  <parameter name="readSlaveAddressWidthMax" value="29" />
   <parameter name="readSlaveDataWidthMax" value="64" />
-  <parameter name="writeAddressMap"><![CDATA[<address-map><slave name='ddr2_bot.s1' start='0x18000000' end='0x20000000' /></address-map>]]></parameter>
+  <parameter name="writeAddressMap"><![CDATA[<address-map><slave name='ddr2_bot.s1' start='0x10000000' end='0x18000000' /></address-map>]]></parameter>
   <parameter name="writeSlaveAddressWidthMax" value="29" />
   <parameter name="writeSlaveDataWidthMax" value="64" />
  </module>
@@ -2051,7 +2046,7 @@
    start="cpu.instruction_master"
    end="cpu.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x29000800" />
+  <parameter name="baseAddress" value="0x21000800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2071,7 +2066,7 @@
    start="cpu.data_master"
    end="slow_peripheral_bridge.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x28000000" />
+  <parameter name="baseAddress" value="0x20000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2080,7 +2075,7 @@
    start="cpu.data_master"
    end="ddr2_top_clock_bridge.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x20000000" />
+  <parameter name="baseAddress" value="0x18000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2089,7 +2084,7 @@
    start="cpu.instruction_master"
    end="ddr2_top_clock_bridge.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x20000000" />
+  <parameter name="baseAddress" value="0x18000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2206,7 +2201,7 @@
    start="cpu.data_master"
    end="cpu.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x29000800" />
+  <parameter name="baseAddress" value="0x21000800" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="13.0" start="clk.clk" end="pll.inclk_interface" />
@@ -2627,24 +2622,6 @@
    start="cpu.jtag_debug_module_reset"
    end="ddr2_bot_clock_bridge.s0_reset" />
  <connection
-   kind="avalon"
-   version="13.0"
-   start="cpu.data_master"
-   end="ddr2_bot_clock_bridge.s0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x18000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="cpu.instruction_master"
-   end="ddr2_bot_clock_bridge.s0">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x18000000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
    kind="clock"
    version="13.0"
    start="pll.c0"
@@ -2671,15 +2648,6 @@
    start="clk_125.clk_reset"
    end="dma_0.reset" />
  <connection kind="reset" version="13.0" start="clk.clk_reset" end="dma_0.reset" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="cpu.data_master"
-   end="dma_0.control_port_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x29001000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
  <connection kind="interrupt" version="13.0" start="cpu.d_irq" end="dma_0.irq">
   <parameter name="irqNumber" value="5" />
  </connection>
@@ -2689,7 +2657,7 @@
    start="dma_0.write_master"
    end="ddr2_bot_clock_bridge.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x18000000" />
+  <parameter name="baseAddress" value="0x10000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -2698,29 +2666,47 @@
    start="dma_0.read_master"
    end="ddr2_top_clock_bridge.s0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x20000000" />
+  <parameter name="baseAddress" value="0x18000000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
    kind="clock"
    version="13.0"
-   start="ddr2_top.auxhalf"
-   end="ddr2_top_clock_bridge.m0_clk" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="ddr2_top.auxhalf"
-   end="sysclk_top.in_clk" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="ddr2_bot.auxhalf"
+   start="ddr2_bot.sysclk"
    end="ddr2_bot_clock_bridge.m0_clk" />
  <connection
    kind="clock"
    version="13.0"
-   start="ddr2_bot.auxhalf"
+   start="ddr2_bot.sysclk"
    end="sysclk_bot.in_clk" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="ddr2_top.sysclk"
+   end="ddr2_top_clock_bridge.m0_clk" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="ddr2_top.sysclk"
+   end="sysclk_top.in_clk" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="cpu.data_master"
+   end="dma_0.control_port_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x21001000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="cpu.data_master"
+   end="ddr2_bot_clock_bridge.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />
 </system>

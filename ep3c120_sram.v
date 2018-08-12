@@ -89,6 +89,12 @@ module ep3c120_sram (
                                         top_flash_oen,
                                         top_flash_resetn,
                                         top_flash_wen,
+													 top_sram_clk,
+													 top_sram_csn,
+													 top_sram_ben,
+													 top_sram_oen,
+													 top_sram_wen,
+													 top_sram_wait,
                                         top_fsa,
                                         top_fsd,
                                         top_led,
@@ -164,6 +170,12 @@ module ep3c120_sram (
   output           top_flash_oen;
   output           top_flash_resetn;
   output           top_flash_wen;
+  output           top_sram_clk;
+  output           top_sram_csn;
+  output  [  3: 0] top_sram_ben;
+  output           top_sram_oen;
+  output           top_sram_wen;
+  input   [  1: 0] top_sram_wait;
   output  [ 24: 0] top_fsa;
   inout   [ 31: 0] top_fsd;
   output  [  7: 0] top_led;
@@ -259,6 +271,12 @@ module ep3c120_sram (
   wire             top_flash_oen;
   wire             top_flash_resetn;
   wire             top_flash_wen;
+  wire             top_sram_clk;
+  wire             top_sram_csn;
+  wire    [  3: 0] top_sram_ben;
+  wire             top_sram_oen;
+  wire             top_sram_wen;
+  wire    [  1: 0] top_sram_wait;
   wire    [ 24: 0] top_fsa;
   wire    [ 25: 0] top_fsa_alignment;
   wire    [ 31: 0] top_fsd;
@@ -325,8 +343,15 @@ module ep3c120_sram (
     //  .cs_n_to_the_max2 (top_cs_n_to_the_max2),
       //.ena_10_from_the_tse_mac (top_ena_10_from_the_tse_mac),
       //.eth_mode_from_the_tse_mac (top_eth_mode_from_the_tse_mac),
-      //.flash_tristate_bridge_address (top_fsa_alignment),
-      //.flash_tristate_bridge_data (top_fsd),
+      .flash_ssram_tristate_bridge_address (top_fsa_alignment),
+      .flash_ssram_tristate_bridge_data (top_fsd),
+      .read_n_to_the_ext_flash (top_flash_oen),
+      .write_n_to_the_ext_flash (top_flash_wen),
+      .select_n_to_the_ext_flash (top_flash_cen),
+		.bwe_n_to_the_ssram(top_sram_wen),
+		.chipenable1_n_to_the_ssram(top_sram_csn),
+		.flash_ssram_tristate_bridge_bridge_0_out_ssram_tcm_read_n_out(top_sram_oen),
+		.bw_n_to_the_ssram(top_sram_ben),
       //.global_reset_n_to_the_ddr2_sdram (top_internal_reset_n),
       //.global_reset_n_to_the_ddr_sdram (top_internal_reset_n),
       //.gm_rx_d_to_the_tse_mac (top_gm_rx_d_to_the_tse_mac),
@@ -395,21 +420,18 @@ module ep3c120_sram (
       //.oe_n_to_the_max2 (top_oe_n_to_the_max2),
       //.out_port_from_the_lcd_i2c_en (top_out_port_from_the_lcd_i2c_en),
       //.out_port_from_the_lcd_i2c_scl (top_out_port_from_the_lcd_i2c_scl),
-      .led_pio_external_connection_export (top_led),
       //.out_port_from_the_pio_id_eeprom_scl (top_HSMB_ID_I2CSCL),
+      .led_pio_external_connection_export (top_led),
       .pll_c0_out (top_HSMB_LCD_NCLK),
       .pll_c2_out (top_pll_c2_out),
-      .read_n_to_the_ext_flash (top_flash_oen),
       .merged_resets_in_reset_reset_n (top_internal_reset_n),
-     /// .rx_clk_to_the_tse_mac (top_rx_clk_to_the_tse_mac),
+      //.rx_clk_to_the_tse_mac (top_rx_clk_to_the_tse_mac),
       //.rxd_to_the_uart1 (top_HSMB_UART_RXD),
-      .select_n_to_the_ext_flash (top_flash_cen),
       //.set_1000_to_the_tse_mac (top_set_1000_to_the_tse_mac),
       //.set_10_to_the_tse_mac (top_set_10_to_the_tse_mac),
       //.tx_clk_to_the_tse_mac (top_tx_clk_to_the_tse_mac),
       //.txd_from_the_uart1 (top_HSMB_UART_TXD),
       //.we_n_to_the_max2 (top_we_n_to_the_max2),
-      .write_n_to_the_ext_flash (top_flash_wen),
 		.lcd_display_external_RS(top_lcd_d_cn),
 		.lcd_display_external_RW(top_lcd_wen),
 		.lcd_display_external_data(top_lcd_data),
@@ -422,6 +444,7 @@ module ep3c120_sram (
   assign top_HSMB_SD_Wp = 1'b0;
   assign top_fsa = top_fsa_alignment[25 : 1];
   assign top_flash_resetn = top_internal_reset_n;
+  //assign top_sram_clk = top_HSMB_LCD_NCLK;
   assign top_internal_reset_n = top_reset_n;
   assign top_HSMB_SCEN = top_out_port_from_the_lcd_i2c_en;
   assign top_HSMB_ADC_CS_N = top_SS_n_from_the_touch_panel_spi;

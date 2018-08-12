@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2018-8-6 6:16:54</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1533507414744</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 12, 2018 11:44:18 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1534088658574</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>E:\altera\13.0\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios.sopcinfo</SopcDesignFile>
@@ -870,91 +870,91 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ssram</slaveDescriptor>
-                <addressRange>0x04000000 - 0x040FFFFF</addressRange>
-                <addressSpan>1048576</addressSpan>
+                <addressRange>0x04000000 - 0x047FFFFF</addressRange>
+                <addressSpan>8388608</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ddr2_bot</slaveDescriptor>
-                <addressRange>0x18000000 - 0x1FFFFFFF</addressRange>
+                <addressRange>0x10000000 - 0x17FFFFFF</addressRange>
                 <addressSpan>134217728</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ddr2_top</slaveDescriptor>
-                <addressRange>0x20000000 - 0x27FFFFFF</addressRange>
+                <addressRange>0x18000000 - 0x1FFFFFFF</addressRange>
                 <addressSpan>134217728</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>high_res_timer</slaveDescriptor>
-                <addressRange>0x28000000 - 0x2800003F</addressRange>
+                <addressRange>0x20000000 - 0x2000003F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>seven_seg_pio</slaveDescriptor>
-                <addressRange>0x28000020 - 0x2800003F</addressRange>
+                <addressRange>0x20000020 - 0x2000003F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>lcd_display</slaveDescriptor>
-                <addressRange>0x28000030 - 0x2800004F</addressRange>
+                <addressRange>0x20000030 - 0x2000004F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>performance_counter</slaveDescriptor>
-                <addressRange>0x28000040 - 0x2800007F</addressRange>
+                <addressRange>0x20000040 - 0x2000007F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>led_pio</slaveDescriptor>
-                <addressRange>0x28000060 - 0x2800007F</addressRange>
+                <addressRange>0x20000060 - 0x2000007F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>button_pio</slaveDescriptor>
-                <addressRange>0x28000070 - 0x2800008F</addressRange>
+                <addressRange>0x20000070 - 0x2000008F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x28000080 - 0x2800008F</addressRange>
+                <addressRange>0x20000080 - 0x2000008F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pll</slaveDescriptor>
-                <addressRange>0x28000090 - 0x2800009F</addressRange>
+                <addressRange>0x20000090 - 0x2000009F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sys_clk_timer</slaveDescriptor>
-                <addressRange>0x28000180 - 0x280001BF</addressRange>
+                <addressRange>0x20000180 - 0x200001BF</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>fir_dma</slaveDescriptor>
-                <addressRange>0x28000360 - 0x2800037F</addressRange>
+                <addressRange>0x20000360 - 0x2000037F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x28000390 - 0x28000397</addressRange>
+                <addressRange>0x20000390 - 0x20000397</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>dma_0</slaveDescriptor>
-                <addressRange>0x29001000 - 0x2900103F</addressRange>
+                <addressRange>0x21001000 - 0x2100103F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
