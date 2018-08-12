@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2018-8-6 6:16:54</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1533507414744</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>E:\altera\13.0\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2018-8-12 19:45:56</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1534074356288</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>D:\altera\project\ep3c120_sram\software\custom_dma_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -870,8 +870,8 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ssram</slaveDescriptor>
-                <addressRange>0x04000000 - 0x040FFFFF</addressRange>
-                <addressSpan>1048576</addressSpan>
+                <addressRange>0x04000000 - 0x047FFFFF</addressRange>
+                <addressSpan>8388608</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
@@ -953,8 +953,32 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>descriptor_memory</slaveDescriptor>
+                <addressRange>0x29000000 - 0x29000FFF</addressRange>
+                <addressSpan>4096</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>tse_mac</slaveDescriptor>
+                <addressRange>0x29002000 - 0x290023FF</addressRange>
+                <addressSpan>1024</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sgdma_rx</slaveDescriptor>
+                <addressRange>0x29002400 - 0x2900243F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sgdma_tx</slaveDescriptor>
+                <addressRange>0x29002440 - 0x2900247F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>dma_0</slaveDescriptor>
-                <addressRange>0x29001000 - 0x2900103F</addressRange>
+                <addressRange>0x29002480 - 0x290024BF</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
